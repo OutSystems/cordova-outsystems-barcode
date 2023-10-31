@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<plugin id="com.outsystems.plugins.barcode" version="1.0.0" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+  <name>OSBarcode</name>
+  <description>Cordova Bridge for the OutSystems Officially Supported Barcode Plugin.</description>
+  <author>OutSystems Inc</author>
+  <js-module name="OSBarcode" src="www/OSBarcode.js">
+    <clobbers target="cordova.plugins.OSBarcode"/>
+  </js-module>
+  <platform name="android">
+    <config-file parent="/*" target="res/xml/config.xml">
+      <feature name="OSBarcode">
+        <param name="android-package" value="com.outsystems.plugins.barcode.OSBarcode"/>
+      </feature>
+    </config-file>
+    <config-file parent="/*" target="AndroidManifest.xml"/>
+    <source-file src="src/android/com/outsystems/plugins/barcode/OSBarcode.java" target-dir="src/com/outsystems/plugins/barcode"/>
+  </platform>
+  <platform name="ios">
+    <config-file parent="/*" target="config.xml">
+      <feature name="OSBarcode">
+        <param name="ios-package" value="OSBarcode"/>
+      </feature>
+    </config-file>
+    <source-file src="src/ios/OSBarcode.m"/>
+    <header-file src="src/ios/OSBarcode.h"/>
+  </platform>
+</plugin>

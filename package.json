@@ -1,0 +1,18 @@
+{
+  "name": "com.outsystems.plugins.barcode",
+  "version": "1.0.0",
+  "description": "Cordova Bridge for the OutSystems Officially Supported Barcode Plugin.",
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-ios"
+  ],
+  "cordova": {
+    "id": "com.outsystems.plugins.barcode",
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  },
+  "engines": []
+}
