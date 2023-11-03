@@ -13,7 +13,7 @@
       </feature>
     </config-file>
     <config-file parent="/*" target="AndroidManifest.xml"/>
-    <source-file src="src/android/com/outsystems/plugins/barcode/OSBarcode.kt" target-dir="src/com/outsystems/plugins/barcode"/>
+    <source-file src="src/android/com/outsystems/plugins/barcode/OSBarcode.kt" target-dir="app/src/main/kotlin/com/outsystems/barcode"/>
     <framework src="src/android/com/outsystems/plugins/barcode/build.gradle" custom="true" type="gradleReference" />
   </platform>
   <platform name="ios">
