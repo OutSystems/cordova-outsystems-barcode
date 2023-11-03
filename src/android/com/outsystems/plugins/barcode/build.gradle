@@ -1,0 +1,38 @@
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:8.1.1'
+    }
+}
+
+repositories {
+    google()
+    mavenCentral()
+    repositories {
+        maven { url 'https://pkgs.dev.azure.com/OutSystemsRD/9e79bc5b-69b2-4476-9ca5-d67594972a52/_packaging/PublicArtifactRepository/maven/v1' }
+    }
+}
+
+repositories{
+    flatDir {
+        dirs 'src/main/libs'
+    }
+}
+
+
+apply plugin: 'kotlin-kapt'
+
+dependencies {
+    implementation("com.github.outsystems:oscore-android:1.1.0@aar")
+    implementation("com.github.outsystems:oscordova-android:1.1.0@aar")
+
+    implementation 'androidx.appcompat:appcompat:1.4.1'
+    implementation "androidx.activity:activity-ktx:1.4.0"
+
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.5.0'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.4.3'
+}
