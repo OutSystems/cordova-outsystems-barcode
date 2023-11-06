@@ -1,38 +1,95 @@
 package com.outsystems.plugins.barcode
 
+import android.content.Intent
+import com.google.gson.Gson
+import com.outsystems.plugins.barcode.controller.OSBARCController
+import com.outsystems.plugins.barcode.model.OSBARCError
+import com.outsystems.plugins.barcode.model.OSBARCScanParameters
+import com.outsystems.plugins.oscordova.CordovaImplementation
+import kotlinx.coroutines.runBlocking
 import org.apache.cordova.CallbackContext
-import org.apache.cordova.CordovaPlugin
+import org.apache.cordova.CordovaInterface
+import org.apache.cordova.CordovaWebView
 import org.json.JSONArray
-import org.json.JSONException
 
-class OSBarcode : CordovaPlugin() {
-    @Throws(JSONException::class)
+class OSBarcode : CordovaImplementation() {
+
+    companion object {
+        private const val ERROR_FORMAT_PREFIX = "OS-PLUG-BARC-"
+    }
+
+    override var callbackContext: CallbackContext? = null
+    private lateinit var barcodeController: OSBARCController
+    val gson by lazy { Gson() }
+
     override fun execute(
         action: String,
         args: JSONArray,
         callbackContext: CallbackContext
     ): Boolean {
-        if (action == "coolMethod") {
-            val message = args.getString(0)
-            coolMethod(message, callbackContext)
-            return true
+        this.callbackContext = callbackContext
+        val result = runBlocking {
+            when (action) {
+                "scan" -> {
+                    scan(args)
+                }
+
+                else -> false
+            }
+            true
         }
-        return false
+        return result
     }
 
-    private fun coolMethod(message: String?, callbackContext: CallbackContext) {
-        if (message != null && message.length > 0) {
-            callbackContext.success(message)
+    override fun initialize(cordova: CordovaInterface, webView: CordovaWebView) {
+        super.initialize(cordova, webView)
+        barcodeController = OSBARCController()
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, intent: Intent?) {
+        super.onActivityResult(requestCode, resultCode, intent)
+        val s = ""
+    }
+
+    override fun onRequestPermissionResult(
+        requestCode: Int,
+        permissions: Array<String>,
+        grantResults: IntArray
+    ) {
+        // do nothing
+    }
+
+    override fun areGooglePlayServicesAvailable(): Boolean {
+        // do nothing
+        return true
+    }
+
+    private fun scan(args: JSONArray) {
+        setAsActivityResultCallback()
+        val parameters = buildScanParameters(args)
+        if (parameters != null) {
+            barcodeController.scanCode(getActivity(), parameters)
         } else {
-            callbackContext.error("Expected one non-empty string argument.")
+            sendPluginResult(
+                null,
+                Pair(
+                    formatErrorCode(OSBARCError.INVALID_PARAMETERS_ERROR.code),
+                    OSBARCError.INVALID_PARAMETERS_ERROR.description
+                )
+            )
         }
     }
 
-    protected fun privateHelloWorldString(): String {
-        return "Hello World"
+    private fun buildScanParameters(args: JSONArray): OSBARCScanParameters? {
+        return try {
+            gson.fromJson(args.getString(0), OSBARCScanParameters::class.java)
+        } catch (e: Exception) {
+            null
+        }
     }
 
-    fun publicHelloWorld(): String {
-        return privateHelloWorldString()
+    private fun formatErrorCode(code: Int): String {
+        return ERROR_FORMAT_PREFIX + code.toString().padStart(4, '0')
     }
+
 }
