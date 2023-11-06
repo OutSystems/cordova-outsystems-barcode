@@ -48,7 +48,13 @@ class OSBarcode : CordovaImplementation() {
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, intent: Intent?) {
         super.onActivityResult(requestCode, resultCode, intent)
-        val s = ""
+        barcodeController.handleActivityResult(requestCode, resultCode, intent,
+            { result ->
+                sendPluginResult(result, null)
+            },
+            { error ->
+                sendPluginResult(null, Pair(formatErrorCode(error.code), error.description))
+            })
     }
 
     override fun onRequestPermissionResult(
