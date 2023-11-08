@@ -30,7 +30,7 @@ class OSBarcode : CordovaImplementation() {
         this.callbackContext = callbackContext
         val result = runBlocking {
             when (action) {
-                "scan" -> {
+                "scanBarcode" -> {
                     scan(args)
                 }
 

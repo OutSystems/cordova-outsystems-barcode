@@ -13,5 +13,5 @@ exports.scanBarcode = function (options, successCallback, errorCallback) {
 
     let args = [{scanInstructions, cameraDirection, scanOrientation, scanButton, scanText, hint, androidScanningLibrary}];
 
-    exec(successCallback, errorCallback, 'OSBarcode', 'scan', args);
+    exec(successCallback, errorCallback, 'OSBarcode', 'scanBarcode', args);
 }
