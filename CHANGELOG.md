@@ -6,4 +6,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 The changes documented here do not include those from the original repository.
 
-## 1.0.0
+## [Unreleased]
+
+### Cordova Wrapper
+
+- Add support for plugin's old version of the `scanBarcode` method (https://outsystemsrd.atlassian.net/browse/RMET-2916).
+- Add `scanBarcode` method (https://outsystemsrd.atlassian.net/browse/RMET-2916).

@@ -6,7 +6,7 @@
   <js-module name="OSBarcode" src="www/OSBarcode.js">
     <clobbers target="cordova.plugins.OSBarcode"/>
   </js-module>
-  
+
   <js-module name="OSBarcodeScanner" src="www/OSBarcodeScanner.js">
     <clobbers target="cordova.plugins.OSBarcodeScanner"/>
   </js-module>
