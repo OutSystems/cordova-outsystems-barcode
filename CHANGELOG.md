@@ -8,6 +8,11 @@ The changes documented here do not include those from the original repository.
 
 ## [Unreleased]
 
+### Android
+
+#### 08-11-2023
+Android - Scan barcode feature (https://outsystemsrd.atlassian.net/browse/RMET-2758)
+
 ### Cordova Wrapper
 
 - Add support for plugin's old version of the `scanBarcode` method (https://outsystemsrd.atlassian.net/browse/RMET-2916).

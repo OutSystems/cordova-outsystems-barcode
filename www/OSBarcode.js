@@ -13,6 +13,5 @@ exports.scanBarcode = function (options, successCallback, errorCallback) {
 
     let args = [{scanInstructions, cameraDirection, scanOrientation, scanButton, scanText, hint, androidScanningLibrary}];
 
-    // temporary, while the bridge doesn't implement the native library connection.
-    console.log(args);
+    exec(successCallback, errorCallback, 'OSBarcode', 'scanBarcode', args);
 }
