@@ -8,6 +8,12 @@ The changes documented here do not include those from the original repository.
 
 ## [Unreleased]
 
+### iOS
+
+- Add `scanButtonText` argument to `scanBarcode` (https://outsystemsrd.atlassian.net/browse/RMET-2752).
+- Add `scanInstructions` argument to `scanBarcode` (https://outsystemsrd.atlassian.net/browse/RMET-2751).
+- Implement `scanBarcode` (https://outsystemsrd.atlassian.net/browse/RMET-2748).
+
 ### Android
 
 #### 08-11-2023
