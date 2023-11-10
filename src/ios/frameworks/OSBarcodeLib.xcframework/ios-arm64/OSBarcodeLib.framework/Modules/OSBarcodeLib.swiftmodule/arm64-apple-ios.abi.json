@@ -1,0 +1,577 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "TopLevel",
+    "printedName": "TopLevel",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "AVFoundation",
+        "printedName": "AVFoundation",
+        "declKind": "Import",
+        "moduleName": "OSBarcodeLib"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "OSBarcodeLib"
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "OSBarcodeLib"
+      },
+      {
+        "kind": "Import",
+        "name": "AVFoundation",
+        "printedName": "AVFoundation",
+        "declKind": "Import",
+        "moduleName": "OSBarcodeLib"
+      },
+      {
+        "kind": "Import",
+        "name": "Combine",
+        "printedName": "Combine",
+        "declKind": "Import",
+        "moduleName": "OSBarcodeLib"
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "OSBarcodeLib"
+      },
+      {
+        "kind": "Import",
+        "name": "AVFoundation",
+        "printedName": "AVFoundation",
+        "declKind": "Import",
+        "moduleName": "OSBarcodeLib"
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "OSBarcodeLib"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "OSBarcodeLib"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "OSBarcodeLib"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "OSBarcodeLib"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "OSBARCManagerFactory",
+        "printedName": "OSBARCManagerFactory",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "createManager",
+            "printedName": "createManager(with:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "OSBARCManagerProtocol",
+                "printedName": "OSBarcodeLib.OSBARCManagerProtocol",
+                "usr": "s:12OSBarcodeLib21OSBARCManagerProtocolP"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIViewController",
+                "printedName": "UIKit.UIViewController",
+                "usr": "c:objc(cs)UIViewController"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12OSBarcodeLib20OSBARCManagerFactoryV13createManager4withAA0C8Protocol_pSo16UIViewControllerC_tFZ",
+            "mangledName": "$s12OSBarcodeLib20OSBARCManagerFactoryV13createManager4withAA0C8Protocol_pSo16UIViewControllerC_tFZ",
+            "moduleName": "OSBarcodeLib",
+            "static": true,
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:12OSBarcodeLib20OSBARCManagerFactoryV",
+        "mangledName": "$s12OSBarcodeLib20OSBARCManagerFactoryV",
+        "moduleName": "OSBarcodeLib",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "OSBarcodeLib"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "OSBARCManagerError",
+        "printedName": "OSBARCManagerError",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "cameraAccessDenied",
+            "printedName": "cameraAccessDenied",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(OSBarcodeLib.OSBARCManagerError.Type) -> OSBarcodeLib.OSBARCManagerError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "OSBARCManagerError",
+                    "printedName": "OSBarcodeLib.OSBARCManagerError",
+                    "usr": "s:12OSBarcodeLib18OSBARCManagerErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "OSBarcodeLib.OSBARCManagerError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "OSBARCManagerError",
+                        "printedName": "OSBarcodeLib.OSBARCManagerError",
+                        "usr": "s:12OSBarcodeLib18OSBARCManagerErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12OSBarcodeLib18OSBARCManagerErrorO18cameraAccessDeniedyA2CmF",
+            "mangledName": "$s12OSBarcodeLib18OSBARCManagerErrorO18cameraAccessDeniedyA2CmF",
+            "moduleName": "OSBarcodeLib"
+          },
+          {
+            "kind": "Var",
+            "name": "scanningCancelled",
+            "printedName": "scanningCancelled",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(OSBarcodeLib.OSBARCManagerError.Type) -> OSBarcodeLib.OSBARCManagerError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "OSBARCManagerError",
+                    "printedName": "OSBarcodeLib.OSBARCManagerError",
+                    "usr": "s:12OSBarcodeLib18OSBARCManagerErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "OSBarcodeLib.OSBARCManagerError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "OSBARCManagerError",
+                        "printedName": "OSBarcodeLib.OSBARCManagerError",
+                        "usr": "s:12OSBarcodeLib18OSBARCManagerErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12OSBarcodeLib18OSBARCManagerErrorO17scanningCancelledyA2CmF",
+            "mangledName": "$s12OSBarcodeLib18OSBARCManagerErrorO17scanningCancelledyA2CmF",
+            "moduleName": "OSBarcodeLib"
+          },
+          {
+            "kind": "Function",
+            "name": "==",
+            "printedName": "==(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "OSBARCManagerError",
+                "printedName": "OSBarcodeLib.OSBARCManagerError",
+                "usr": "s:12OSBarcodeLib18OSBARCManagerErrorO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "OSBARCManagerError",
+                "printedName": "OSBarcodeLib.OSBARCManagerError",
+                "usr": "s:12OSBarcodeLib18OSBARCManagerErrorO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12OSBarcodeLib18OSBARCManagerErrorO2eeoiySbAC_ACtFZ",
+            "mangledName": "$s12OSBarcodeLib18OSBARCManagerErrorO2eeoiySbAC_ACtFZ",
+            "moduleName": "OSBarcodeLib",
+            "static": true,
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "hashValue",
+            "printedName": "hashValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12OSBarcodeLib18OSBARCManagerErrorO9hashValueSivp",
+            "mangledName": "$s12OSBarcodeLib18OSBARCManagerErrorO9hashValueSivp",
+            "moduleName": "OSBarcodeLib",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12OSBarcodeLib18OSBARCManagerErrorO9hashValueSivg",
+                "mangledName": "$s12OSBarcodeLib18OSBARCManagerErrorO9hashValueSivg",
+                "moduleName": "OSBarcodeLib",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "hash",
+            "printedName": "hash(into:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Hasher",
+                "printedName": "Swift.Hasher",
+                "paramValueOwnership": "InOut",
+                "usr": "s:s6HasherV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12OSBarcodeLib18OSBARCManagerErrorO4hash4intoys6HasherVz_tF",
+            "mangledName": "$s12OSBarcodeLib18OSBARCManagerErrorO4hash4intoys6HasherVz_tF",
+            "moduleName": "OSBarcodeLib",
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:12OSBarcodeLib18OSBARCManagerErrorO",
+        "mangledName": "$s12OSBarcodeLib18OSBARCManagerErrorO",
+        "moduleName": "OSBarcodeLib",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Error",
+            "printedName": "Error",
+            "usr": "s:s5ErrorP",
+            "mangledName": "$ss5ErrorP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "AVFoundation",
+        "printedName": "AVFoundation",
+        "declKind": "Import",
+        "moduleName": "OSBarcodeLib"
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "OSBarcodeLib"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "OSBarcodeLib"
+      },
+      {
+        "kind": "Import",
+        "name": "AVFoundation",
+        "printedName": "AVFoundation",
+        "declKind": "Import",
+        "moduleName": "OSBarcodeLib"
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "OSBarcodeLib"
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "OSBarcodeLib"
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "OSBarcodeLib"
+      },
+      {
+        "kind": "Import",
+        "name": "AVFoundation",
+        "printedName": "AVFoundation",
+        "declKind": "Import",
+        "moduleName": "OSBarcodeLib"
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "OSBarcodeLib"
+      },
+      {
+        "kind": "Import",
+        "name": "Vision",
+        "printedName": "Vision",
+        "declKind": "Import",
+        "moduleName": "OSBarcodeLib"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "OSBARCManagerProtocol",
+        "printedName": "OSBARCManagerProtocol",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "scanBarcode",
+            "printedName": "scanBarcode(with:and:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12OSBarcodeLib21OSBARCManagerProtocolP11scanBarcode4with3andS2S_SSSgtYaKF",
+            "mangledName": "$s12OSBarcodeLib21OSBARCManagerProtocolP11scanBarcode4with3andS2S_SSSgtYaKF",
+            "moduleName": "OSBarcodeLib",
+            "genericSig": "<τ_0_0 where τ_0_0 : OSBarcodeLib.OSBARCManagerProtocol>",
+            "sugared_genericSig": "<Self where Self : OSBarcodeLib.OSBARCManagerProtocol>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:12OSBarcodeLib21OSBARCManagerProtocolP",
+        "mangledName": "$s12OSBarcodeLib21OSBARCManagerProtocolP",
+        "moduleName": "OSBarcodeLib",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ]
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/Users\/rcj\/Documents\/Projects\/OSBarcodeLib-iOS\/OSBarcodeLib\/Permissions\/OSBARCPermissionsBehaviour.swift",
+      "kind": "StringLiteral",
+      "offset": 181,
+      "length": 27,
+      "value": "\"Camera Access Not Enabled\""
+    },
+    {
+      "filePath": "\/Users\/rcj\/Documents\/Projects\/OSBarcodeLib-iOS\/OSBarcodeLib\/Permissions\/OSBARCPermissionsBehaviour.swift",
+      "kind": "StringLiteral",
+      "offset": 240,
+      "length": 59,
+      "value": "\"To continue, please go to the Settings app and enable it.\""
+    },
+    {
+      "filePath": "\/Users\/rcj\/Documents\/Projects\/OSBarcodeLib-iOS\/OSBarcodeLib\/Permissions\/OSBARCPermissionsBehaviour.swift",
+      "kind": "StringLiteral",
+      "offset": 331,
+      "length": 4,
+      "value": "\"OK\""
+    },
+    {
+      "filePath": "\/Users\/rcj\/Documents\/Projects\/OSBarcodeLib-iOS\/OSBarcodeLib\/Permissions\/OSBARCPermissionsBehaviour.swift",
+      "kind": "StringLiteral",
+      "offset": 373,
+      "length": 10,
+      "value": "\"Settings\""
+    },
+    {
+      "filePath": "\/Users\/rcj\/Documents\/Projects\/OSBarcodeLib-iOS\/OSBarcodeLib\/Scanner\/OSBARCScannerViewConfigurationValues.swift",
+      "kind": "FloatLiteral",
+      "offset": 159,
+      "length": 3,
+      "value": "0.1"
+    },
+    {
+      "filePath": "\/Users\/rcj\/Documents\/Projects\/OSBarcodeLib-iOS\/OSBarcodeLib\/Scanner\/OSBARCScannerViewConfigurationValues.swift",
+      "kind": "FloatLiteral",
+      "offset": 214,
+      "length": 5,
+      "value": "0.314"
+    },
+    {
+      "filePath": "\/Users\/rcj\/Documents\/Projects\/OSBarcodeLib-iOS\/OSBarcodeLib\/Scanner\/OSBARCScannerViewConfigurationValues.swift",
+      "kind": "FloatLiteral",
+      "offset": 228,
+      "length": 5,
+      "value": "0.341"
+    },
+    {
+      "filePath": "\/Users\/rcj\/Documents\/Projects\/OSBarcodeLib-iOS\/OSBarcodeLib\/Scanner\/OSBARCScannerViewConfigurationValues.swift",
+      "kind": "FloatLiteral",
+      "offset": 241,
+      "length": 5,
+      "value": "0.369"
+    },
+    {
+      "filePath": "\/Users\/rcj\/Documents\/Projects\/OSBarcodeLib-iOS\/OSBarcodeLib\/Scanner\/OSBARCScannerBehaviour.swift",
+      "kind": "StringLiteral",
+      "offset": 308,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/rcj\/Documents\/Projects\/OSBarcodeLib-iOS\/OSBarcodeLib\/Scanner\/OSBARCScannerBehaviour.swift",
+      "kind": "Array",
+      "offset": 424,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/rcj\/Documents\/Projects\/OSBarcodeLib-iOS\/OSBarcodeLib\/Scanner\/OSBARCScannerView.swift",
+      "kind": "BooleanLiteral",
+      "offset": 470,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/rcj\/Documents\/Projects\/OSBarcodeLib-iOS\/OSBarcodeLib\/Scanner\/OSBARCScannerView.swift",
+      "kind": "BooleanLiteral",
+      "offset": 879,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/rcj\/Documents\/Projects\/OSBarcodeLib-iOS\/OSBarcodeLib\/Scanner\/OSBARCScannerViewControllerCoordinator.swift",
+      "kind": "StringLiteral",
+      "offset": 164,
+      "length": 38,
+      "value": "\"OSBarcodeLib.OSBARCScannerViewControllerCoordinator\""
+    }
+  ]
+}
