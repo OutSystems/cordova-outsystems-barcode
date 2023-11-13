@@ -22,7 +22,7 @@ class OSBarcode: CDVPlugin {
             
             Task {
                 do {
-                    guard let scannedBarcode = try await self.plugin?.scanBarcode(with: argumentsModel.scanInstructions, and: argumentsModel.scanButtonText) else {
+                    guard let scannedBarcode = try await self.plugin?.scanBarcode(with: argumentsModel.scanInstructions, argumentsModel.scanButtonText, and: argumentsModel.cameraDirection) else {
                         return self.send(error: .scanningError, for: command.callbackId)
                     }
                     self.send(successfulResult: scannedBarcode, for: command.callbackId)

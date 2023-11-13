@@ -7,7 +7,7 @@ exports.scan = function (options, successCallback, errorCallback) {
 
     let args = {
         scanInstructions: options.scan_instructions,
-        cameraDirection: options.camera_direction,
+        cameraDirection: Number(options.camera_direction),   // the bridge expects an integer, not a string.
         scanOrientation: options.scan_orientation,
         scanButton: options.scan_button,
         scanText: options.scan_button_text,

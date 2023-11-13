@@ -62,6 +62,13 @@
       },
       {
         "kind": "Import",
+        "name": "AVFoundation",
+        "printedName": "AVFoundation",
+        "declKind": "Import",
+        "moduleName": "OSBarcodeLib"
+      },
+      {
+        "kind": "Import",
         "name": "UIKit",
         "printedName": "UIKit",
         "declKind": "Import",
@@ -419,13 +426,214 @@
       },
       {
         "kind": "TypeDecl",
+        "name": "OSBARCCameraModel",
+        "printedName": "OSBARCCameraModel",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "back",
+            "printedName": "back",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(OSBarcodeLib.OSBARCCameraModel.Type) -> OSBarcodeLib.OSBARCCameraModel",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "OSBARCCameraModel",
+                    "printedName": "OSBarcodeLib.OSBARCCameraModel",
+                    "usr": "s:12OSBarcodeLib17OSBARCCameraModelO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "OSBarcodeLib.OSBARCCameraModel.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "OSBARCCameraModel",
+                        "printedName": "OSBarcodeLib.OSBARCCameraModel",
+                        "usr": "s:12OSBarcodeLib17OSBARCCameraModelO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12OSBarcodeLib17OSBARCCameraModelO4backyA2CmF",
+            "mangledName": "$s12OSBarcodeLib17OSBARCCameraModelO4backyA2CmF",
+            "moduleName": "OSBarcodeLib"
+          },
+          {
+            "kind": "Var",
+            "name": "front",
+            "printedName": "front",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(OSBarcodeLib.OSBARCCameraModel.Type) -> OSBarcodeLib.OSBARCCameraModel",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "OSBARCCameraModel",
+                    "printedName": "OSBarcodeLib.OSBARCCameraModel",
+                    "usr": "s:12OSBarcodeLib17OSBARCCameraModelO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "OSBarcodeLib.OSBARCCameraModel.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "OSBARCCameraModel",
+                        "printedName": "OSBarcodeLib.OSBARCCameraModel",
+                        "usr": "s:12OSBarcodeLib17OSBARCCameraModelO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12OSBarcodeLib17OSBARCCameraModelO5frontyA2CmF",
+            "mangledName": "$s12OSBarcodeLib17OSBARCCameraModelO5frontyA2CmF",
+            "moduleName": "OSBarcodeLib"
+          },
+          {
+            "kind": "Function",
+            "name": "==",
+            "printedName": "==(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "OSBARCCameraModel",
+                "printedName": "OSBarcodeLib.OSBARCCameraModel",
+                "usr": "s:12OSBarcodeLib17OSBARCCameraModelO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "OSBARCCameraModel",
+                "printedName": "OSBarcodeLib.OSBARCCameraModel",
+                "usr": "s:12OSBarcodeLib17OSBARCCameraModelO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12OSBarcodeLib17OSBARCCameraModelO2eeoiySbAC_ACtFZ",
+            "mangledName": "$s12OSBarcodeLib17OSBARCCameraModelO2eeoiySbAC_ACtFZ",
+            "moduleName": "OSBarcodeLib",
+            "static": true,
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "hashValue",
+            "printedName": "hashValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12OSBarcodeLib17OSBARCCameraModelO9hashValueSivp",
+            "mangledName": "$s12OSBarcodeLib17OSBARCCameraModelO9hashValueSivp",
+            "moduleName": "OSBarcodeLib",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12OSBarcodeLib17OSBARCCameraModelO9hashValueSivg",
+                "mangledName": "$s12OSBarcodeLib17OSBARCCameraModelO9hashValueSivg",
+                "moduleName": "OSBarcodeLib",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "hash",
+            "printedName": "hash(into:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Hasher",
+                "printedName": "Swift.Hasher",
+                "paramValueOwnership": "InOut",
+                "usr": "s:s6HasherV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12OSBarcodeLib17OSBARCCameraModelO4hash4intoys6HasherVz_tF",
+            "mangledName": "$s12OSBarcodeLib17OSBARCCameraModelO4hash4intoys6HasherVz_tF",
+            "moduleName": "OSBarcodeLib",
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:12OSBarcodeLib17OSBARCCameraModelO",
+        "mangledName": "$s12OSBarcodeLib17OSBARCCameraModelO",
+        "moduleName": "OSBarcodeLib",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
         "name": "OSBARCManagerProtocol",
         "printedName": "OSBARCManagerProtocol",
         "children": [
           {
             "kind": "Function",
             "name": "scanBarcode",
-            "printedName": "scanBarcode(with:and:)",
+            "printedName": "scanBarcode(with:_:and:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -452,11 +660,17 @@
                   }
                 ],
                 "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "OSBARCCameraModel",
+                "printedName": "OSBarcodeLib.OSBARCCameraModel",
+                "usr": "s:12OSBarcodeLib17OSBARCCameraModelO"
               }
             ],
             "declKind": "Func",
-            "usr": "s:12OSBarcodeLib21OSBARCManagerProtocolP11scanBarcode4with3andS2S_SSSgtYaKF",
-            "mangledName": "$s12OSBarcodeLib21OSBARCManagerProtocolP11scanBarcode4with3andS2S_SSSgtYaKF",
+            "usr": "s:12OSBarcodeLib21OSBARCManagerProtocolP11scanBarcode4with_3andS2S_SSSgAA17OSBARCCameraModelOtYaKF",
+            "mangledName": "$s12OSBarcodeLib21OSBARCManagerProtocolP11scanBarcode4with_3andS2S_SSSgAA17OSBARCCameraModelOtYaKF",
             "moduleName": "OSBarcodeLib",
             "genericSig": "<τ_0_0 where τ_0_0 : OSBarcodeLib.OSBARCManagerProtocol>",
             "sugared_genericSig": "<Self where Self : OSBarcodeLib.OSBARCManagerProtocol>",
@@ -476,6 +690,72 @@
         "declAttributes": [
           "AccessControl",
           "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "Position",
+        "printedName": "Position",
+        "declKind": "Enum",
+        "usr": "c:@E@AVCaptureDevicePosition",
+        "moduleName": "AVFoundation",
+        "intro_iOS": "4.0",
+        "objc_name": "AVCaptureDevicePosition",
+        "declAttributes": [
+          "Available",
+          "SynthesizedProtocol",
+          "ObjC",
+          "SynthesizedProtocol",
+          "Sendable",
+          "Dynamic"
+        ],
+        "isFromExtension": true,
+        "enumRawTypeName": "Int",
+        "isExternal": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          }
         ]
       }
     ],
