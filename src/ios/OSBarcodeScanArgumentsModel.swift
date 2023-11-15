@@ -5,12 +5,14 @@ struct OSBarcodeScanArgumentsModel: Decodable {
     let scanInstructions: String
     let scanButtonText: String?
     let cameraDirection: OSBARCCameraModel
+    let scanOrientation: OSBARCOrientationModel
     
     enum CodingKeys: CodingKey {
         case scanButton
         case scanInstructions
         case scanText
         case cameraDirection
+        case scanOrientation
     }
     
     init(from decoder: Decoder) throws {
@@ -27,12 +29,16 @@ struct OSBarcodeScanArgumentsModel: Decodable {
         let cameraDirectionInt = try container.decode(Int.self, forKey: .cameraDirection)
         let cameraDirection = OSBARCCameraModel.map(value: cameraDirectionInt)
         
-        self.init(scanInstructions, scanButtonText, cameraDirection)
+        let scanOrientationInt = try container.decode(Int.self, forKey: .scanOrientation)
+        let scanOrientation = OSBARCOrientationModel.map(value: scanOrientationInt)
+        
+        self.init(scanInstructions, scanButtonText, cameraDirection, scanOrientation)
     }
     
-    private init(_ scanInstructions: String, _ scanButtonText: String?, _ cameraDirection: OSBARCCameraModel) {
+    private init(_ scanInstructions: String, _ scanButtonText: String?, _ cameraDirection: OSBARCCameraModel, _ scanOrientation: OSBARCOrientationModel) {
         self.scanInstructions = scanInstructions
         self.scanButtonText = scanButtonText
         self.cameraDirection = cameraDirection
+        self.scanOrientation = scanOrientation
     }
 }

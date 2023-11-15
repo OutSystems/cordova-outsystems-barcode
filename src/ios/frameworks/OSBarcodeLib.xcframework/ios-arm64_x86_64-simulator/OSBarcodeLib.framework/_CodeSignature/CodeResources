@@ -18,43 +18,43 @@
 		</data>
 		<key>Modules/OSBarcodeLib.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		C9hD13ilbWPbVriAMhsZ2kIuSOM=
+		BjYXZmw2yYGMtHTbPQAOoFtiGLw=
 		</data>
 		<key>Modules/OSBarcodeLib.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		osxalr/1uMWJg5+5xMfQHLKDUVE=
+		uL2cjneXHZj5KcCkm45b1hXJ68o=
 		</data>
 		<key>Modules/OSBarcodeLib.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		gm40epGt0SjEDwfYdF4/n9lF3Sw=
+		kpq1ib1r5qCL7U5yjtT0QmquhZU=
 		</data>
 		<key>Modules/OSBarcodeLib.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		osxalr/1uMWJg5+5xMfQHLKDUVE=
+		uL2cjneXHZj5KcCkm45b1hXJ68o=
 		</data>
 		<key>Modules/OSBarcodeLib.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		42wpEXSmPbN+GYmJiBFj5gT5Bk0=
+		bW//BmYT9Nu7bqVoR9qOim+lD1M=
 		</data>
 		<key>Modules/OSBarcodeLib.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		C9hD13ilbWPbVriAMhsZ2kIuSOM=
+		BjYXZmw2yYGMtHTbPQAOoFtiGLw=
 		</data>
 		<key>Modules/OSBarcodeLib.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		dvicoFIFtMzqwpnuJezp6Ptc5/I=
+		nB63bz50QeMYtzMkqfuNk6otp1s=
 		</data>
 		<key>Modules/OSBarcodeLib.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		aeUCseoD23XWtdoQ0cXrza3+ylc=
+		o7ABcElFSSdwv+BI+7kpyl+zq/4=
 		</data>
 		<key>Modules/OSBarcodeLib.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		dvicoFIFtMzqwpnuJezp6Ptc5/I=
+		nB63bz50QeMYtzMkqfuNk6otp1s=
 		</data>
 		<key>Modules/OSBarcodeLib.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		bgh1gmw38iBMBnlZFbTEjcnXJLU=
+		6FbNsQzNPaFCawJVEVGYrtOUDj0=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -81,70 +81,70 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			yiK5kuqJYYxb0v4Yx4Noz0sruOVywiA6VKIbg3lf9Wg=
+			pnr9L3S6rLeP2qP7+wovj0+V999TL7q1HR7ozSVLlpg=
 			</data>
 		</dict>
 		<key>Modules/OSBarcodeLib.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			9D8mHCNMVVbSm3Cn0QUAbOMaQKkzn5Dd+JcnTr1gslY=
+			QzQylBr0jClfxJsh7vdrAgIc+KfpHqgBT4nRf4RNhOg=
 			</data>
 		</dict>
 		<key>Modules/OSBarcodeLib.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			yVItfH6Xoin7ysVpx42Vbq24rkCyrcVRHxyFpQa1dbU=
+			FrwA44F3JXqAL4gixSsAA1y6kVdJgGwxgIKTLj+zmZY=
 			</data>
 		</dict>
 		<key>Modules/OSBarcodeLib.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			9D8mHCNMVVbSm3Cn0QUAbOMaQKkzn5Dd+JcnTr1gslY=
+			QzQylBr0jClfxJsh7vdrAgIc+KfpHqgBT4nRf4RNhOg=
 			</data>
 		</dict>
 		<key>Modules/OSBarcodeLib.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			2t3f+AKMuG9IUCcITK3xi49acFseb9MpYpSDZpzd9u0=
+			ehent1eXWBFtXnomkQq4LuG3w9bFDSr+hkRgkbyO2Bg=
 			</data>
 		</dict>
 		<key>Modules/OSBarcodeLib.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			yiK5kuqJYYxb0v4Yx4Noz0sruOVywiA6VKIbg3lf9Wg=
+			pnr9L3S6rLeP2qP7+wovj0+V999TL7q1HR7ozSVLlpg=
 			</data>
 		</dict>
 		<key>Modules/OSBarcodeLib.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			kXVDbp6M2mzYtud0rDPhaBrhwbnkfq+GjEDoS1Mw7f8=
+			QusAMO1LiM/WMeW6PsjslBpa3QjRC8TMGSmhhAtuB9s=
 			</data>
 		</dict>
 		<key>Modules/OSBarcodeLib.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			yAOOq+6f1jnGGmE2XPWNn/Z355+XlO6CB6s2+3zHMss=
+			XQhKHgJs8qe8FuXfY/jFKI0XixIOTr6qwHMJu+lKyro=
 			</data>
 		</dict>
 		<key>Modules/OSBarcodeLib.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			kXVDbp6M2mzYtud0rDPhaBrhwbnkfq+GjEDoS1Mw7f8=
+			QusAMO1LiM/WMeW6PsjslBpa3QjRC8TMGSmhhAtuB9s=
 			</data>
 		</dict>
 		<key>Modules/OSBarcodeLib.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			AgofqtsW30cj3iZfHfxjCeujWcH8Yqh9tzw1JoDg7dA=
+			PNU4wF2Kr7vv0e3qaGr5LjPqWh1XcsNyrAkktikg0vY=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

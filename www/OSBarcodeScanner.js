@@ -7,8 +7,8 @@ exports.scan = function (options, successCallback, errorCallback) {
 
     let args = {
         scanInstructions: options.scan_instructions,
-        cameraDirection: Number(options.camera_direction),   // the bridge expects an integer, not a string.
-        scanOrientation: options.scan_orientation,
+        cameraDirection: Number(options.camera_direction),  // the bridge expects an integer, not a string.
+        scanOrientation: Number(options.scan_orientation),  // the bridge expects an integer, not a string.
         scanButton: options.scan_button,
         scanText: options.scan_button_text,
         hint: BarcodeConstants.Hint.ALL,
