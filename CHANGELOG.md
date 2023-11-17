@@ -10,6 +10,7 @@ The changes documented here do not include those from the original repository.
 
 ### iOS
 
+- Add `cameraDirection` argument to `scanBardoce` (https://outsystemsrd.atlassian.net/browse/RMET-2754).
 - Add `scanButtonText` argument to `scanBarcode` (https://outsystemsrd.atlassian.net/browse/RMET-2752).
 - Add `scanInstructions` argument to `scanBarcode` (https://outsystemsrd.atlassian.net/browse/RMET-2751).
 - Implement `scanBarcode` (https://outsystemsrd.atlassian.net/browse/RMET-2748).

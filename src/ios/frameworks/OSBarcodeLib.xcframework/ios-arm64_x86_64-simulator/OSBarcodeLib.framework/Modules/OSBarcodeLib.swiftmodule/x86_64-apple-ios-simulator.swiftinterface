@@ -23,10 +23,21 @@ public enum OSBARCManagerError : Swift.Error {
     get
   }
 }
+public enum OSBARCCameraModel {
+  case back
+  case front
+  public static func == (a: OSBarcodeLib.OSBARCCameraModel, b: OSBarcodeLib.OSBARCCameraModel) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
 public protocol OSBARCManagerProtocol {
   #if compiler(>=5.3) && $AsyncAwait
-  func scanBarcode(with instructionsText: Swift.String, and buttonText: Swift.String?) async throws -> Swift.String
+  func scanBarcode(with instructionsText: Swift.String, _ buttonText: Swift.String?, and cameraModel: OSBarcodeLib.OSBARCCameraModel) async throws -> Swift.String
   #endif
 }
 extension OSBarcodeLib.OSBARCManagerError : Swift.Equatable {}
 extension OSBarcodeLib.OSBARCManagerError : Swift.Hashable {}
+extension OSBarcodeLib.OSBARCCameraModel : Swift.Equatable {}
+extension OSBarcodeLib.OSBARCCameraModel : Swift.Hashable {}
