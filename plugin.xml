@@ -45,7 +45,7 @@
     <source-file src="src/ios/OSBarcodeError.swift" />
     <source-file src="src/ios/OSBarcodeScanArgumentsModel.swift" />
 
-    <source-file src="src/ios/frameworks/OSBARCCameraModel+Mappable.swift" target-dir="extensions" />
+    <source-file src="src/ios/frameworks/OSBARCArgumentMappable.swift" target-dir="extensions" />
     <framework src="src/ios/frameworks/OSBarcodeLib.xcframework" embed="true" custom="true" />
 
   </platform>

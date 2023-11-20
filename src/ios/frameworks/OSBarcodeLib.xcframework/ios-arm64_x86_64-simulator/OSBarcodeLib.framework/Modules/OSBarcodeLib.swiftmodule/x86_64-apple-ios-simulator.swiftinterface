@@ -34,10 +34,22 @@ public enum OSBARCCameraModel {
 }
 public protocol OSBARCManagerProtocol {
   #if compiler(>=5.3) && $AsyncAwait
-  func scanBarcode(with instructionsText: Swift.String, _ buttonText: Swift.String?, and cameraModel: OSBarcodeLib.OSBARCCameraModel) async throws -> Swift.String
+  func scanBarcode(with instructionsText: Swift.String, _ buttonText: Swift.String?, _ cameraModel: OSBarcodeLib.OSBARCCameraModel, and orientationModel: OSBarcodeLib.OSBARCOrientationModel) async throws -> Swift.String
   #endif
+}
+public enum OSBARCOrientationModel {
+  case adaptive
+  case landscape
+  case portrait
+  public static func == (a: OSBarcodeLib.OSBARCOrientationModel, b: OSBarcodeLib.OSBARCOrientationModel) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
 }
 extension OSBarcodeLib.OSBARCManagerError : Swift.Equatable {}
 extension OSBarcodeLib.OSBARCManagerError : Swift.Hashable {}
 extension OSBarcodeLib.OSBARCCameraModel : Swift.Equatable {}
 extension OSBarcodeLib.OSBARCCameraModel : Swift.Hashable {}
+extension OSBarcodeLib.OSBARCOrientationModel : Swift.Equatable {}
+extension OSBarcodeLib.OSBARCOrientationModel : Swift.Hashable {}
