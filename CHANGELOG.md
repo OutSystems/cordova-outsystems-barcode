@@ -19,6 +19,9 @@ The changes documented here do not include those from the original repository.
 
 ### Android
 
+#### 09-01-2024
+- Update error codes and messages (https://outsystemsrd.atlassian.net/browse/RMET-3037).
+
 #### 08-11-2023
 Android - Scan barcode feature (https://outsystemsrd.atlassian.net/browse/RMET-2758)
 
