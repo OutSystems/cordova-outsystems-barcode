@@ -109,8 +109,8 @@ The action is composed of the following parameters:
 |Code|Message|iOS|Android|
 |:-|:-|:-:|:-:|
 |OS-PLUG-BARC-0004|Error while trying to scan code.|:white_check_mark:|:white_check_mark:|
-|OS-PLUG-BARC-0006|Couldn’t scan because the process was cancelled.|:white_check_mark:|:white_check_mark:|
-|OS-PLUG-BARC-0007|Couldn’t scan because camera wasn’t provided. Check your camera permissions and try again.|:white_check_mark:|:white_check_mark:|
+|OS-PLUG-BARC-0006|Couldn't scan because the process was cancelled.|:white_check_mark:|:white_check_mark:|
+|OS-PLUG-BARC-0007|Couldn't scan because camera access wasn’t provided. Check your camera permissions and try again.|:white_check_mark:|:white_check_mark:|
 |OS-PLUG-BARC-0008|Scanning parameters are invalid.|:white_check_mark:|:white_check_mark:|
-|OS-PLUG-BARC-0009|There's an error scanning the barcode with ZXing.|:x:|:white_check_mark:|
-|OS-PLUG-BARC-0010|There's an error scanning the barcode with ML Kit.|:x:|:white_check_mark:|
+|OS-PLUG-BARC-0009|There was an error scanning the barcode with ZXing.|:x:|:white_check_mark:|
+|OS-PLUG-BARC-0010|There was an error scanning the barcode with ML Kit.|:x:|:white_check_mark:|
