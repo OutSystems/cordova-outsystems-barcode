@@ -10,6 +10,7 @@ The changes documented here do not include those from the original repository.
 
 ### iOS
 
+- Fix error codes and messages (https://outsystemsrd.atlassian.net/browse/RMET-3038).
 - Add `scanOrientation` argument to `scanBarcode` (https://outsystemsrd.atlassian.net/browse/RMET-2753).
 - Add `cameraDirection` argument to `scanBarcode` (https://outsystemsrd.atlassian.net/browse/RMET-2754).
 - Add `scanButtonText` argument to `scanBarcode` (https://outsystemsrd.atlassian.net/browse/RMET-2752).

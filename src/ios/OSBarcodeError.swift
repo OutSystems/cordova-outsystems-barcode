@@ -7,18 +7,15 @@ private struct OSBarcodeErrorLabels {
 enum OSBarcodeError: Int, CustomNSError, LocalizedError {
     case scanningError = 4
     case scanningCancelled = 6
-    
-    // MARK: - This errors are pending a final valid error code.
-    case cameraAccessDenied = 9998
-    case scanInputArgumentsIssue = 9997
+    case cameraAccessDenied = 7
+    case scanInputArgumentsIssue = 8
     
     var errorDescription: String? {
         switch self {
         case .scanningError: return "Error while trying to scan code."
-        case .scanningCancelled: return "Scanning cancelled."
-            
-        case .cameraAccessDenied: return "Camera access has not been enabled."
-        case .scanInputArgumentsIssue: return "Couldn't retrieve the 'scanBarcode' input parameters."
+        case .scanningCancelled: return "Couldn’t scan because the process was cancelled."
+        case .cameraAccessDenied: return "Couldn’t scan because camera access wasn’t provided. Check your camera permissions and try again."
+        case .scanInputArgumentsIssue: return "Scanning parameters are invalid."
         }
     }
     
