@@ -6,4 +6,26 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 The changes documented here do not include those from the original repository.
 
-## 1.0.0
+## [1.0.0]
+
+### iOS
+
+- Fix error codes and messages (https://outsystemsrd.atlassian.net/browse/RMET-3038).
+- Add `scanOrientation` argument to `scanBarcode` (https://outsystemsrd.atlassian.net/browse/RMET-2753).
+- Add `cameraDirection` argument to `scanBarcode` (https://outsystemsrd.atlassian.net/browse/RMET-2754).
+- Add `scanButtonText` argument to `scanBarcode` (https://outsystemsrd.atlassian.net/browse/RMET-2752).
+- Add `scanInstructions` argument to `scanBarcode` (https://outsystemsrd.atlassian.net/browse/RMET-2751).
+- Implement `scanBarcode` (https://outsystemsrd.atlassian.net/browse/RMET-2748).
+
+### Android
+
+#### 09-01-2024
+- Update error codes and messages (https://outsystemsrd.atlassian.net/browse/RMET-3037).
+
+#### 08-11-2023
+Android - Scan barcode feature (https://outsystemsrd.atlassian.net/browse/RMET-2758)
+
+### Cordova Wrapper
+
+- Add support for plugin's old version of the `scanBarcode` method (https://outsystemsrd.atlassian.net/browse/RMET-2916).
+- Add `scanBarcode` method (https://outsystemsrd.atlassian.net/browse/RMET-2916).
