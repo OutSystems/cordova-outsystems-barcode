@@ -1,0 +1,22 @@
+trigger:
+    - master
+
+parameters:
+  - name: isMain
+    type: object
+    default: startsWith(variables['Build.SourceBranch'], 'refs/tags/')
+    
+resources:
+  repositories:
+    - repository: OutSystems.CICDPlatform.CordovaAzurePipelineTemplates
+      type: github
+      ref: refs/heads/master
+      name: OutSystems/OutSystems.CICDPlatform.CordovaAzurePipelineTemplates
+      endpoint: OutSystems
+
+stages:
+- template: templates/plugin-pipeline.yml@OutSystems.CICDPlatform.CordovaAzurePipelineTemplates
+  parameters:
+    platforms:
+      - none
+    canTriggerRelease: ${{ parameters.isMain }}
