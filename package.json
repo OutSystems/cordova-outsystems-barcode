@@ -1,6 +1,6 @@
 {
-  "name": "com.outsystems.plugins.barcode",
-  "version": "1.0.0",
+  "name": "@outsystems/cordova-outsystems-barcode",
+  "version": "0.0.3",
   "description": "Cordova Bridge for the OutSystems Officially Supported Barcode Plugin.",
   "keywords": [
     "ecosystem:cordova",
@@ -13,6 +13,10 @@
       "android",
       "ios"
     ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OutSystems/cordova-outsystems-barcode.git"
   },
   "engines": []
 }
