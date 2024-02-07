@@ -83,6 +83,13 @@
       },
       {
         "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "OSBarcodeLib"
+      },
+      {
+        "kind": "Import",
         "name": "AVFoundation",
         "printedName": "AVFoundation",
         "declKind": "Import",
@@ -159,6 +166,13 @@
           "AccessControl",
           "RawDocComment"
         ]
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "OSBarcodeLib"
       },
       {
         "kind": "Import",
@@ -1435,6 +1449,55 @@
       "value": "false"
     },
     {
+      "filePath": "\/Users\/rcj\/Documents\/Projects\/OSBarcodeLib-iOS\/OSBarcodeLib\/Scanner\/OSBARCScannerView.swift",
+      "kind": "FloatLiteral",
+      "offset": 1179,
+      "length": 3,
+      "value": "1.0"
+    },
+    {
+      "filePath": "\/Users\/rcj\/Documents\/Projects\/OSBarcodeLib-iOS\/OSBarcodeLib\/Scanner\/Interface Elements\/OSBARCZoomButton.swift",
+      "kind": "FloatLiteral",
+      "offset": 530,
+      "length": 4,
+      "value": "36.0"
+    },
+    {
+      "filePath": "\/Users\/rcj\/Documents\/Projects\/OSBarcodeLib-iOS\/OSBarcodeLib\/Scanner\/Interface Elements\/OSBARCZoomButton.swift",
+      "kind": "FloatLiteral",
+      "offset": 731,
+      "length": 4,
+      "value": "12.0"
+    },
+    {
+      "filePath": "\/Users\/rcj\/Documents\/Projects\/OSBarcodeLib-iOS\/OSBarcodeLib\/Scanner\/Interface Elements\/OSBARCZoomButton.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1827,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/rcj\/Documents\/Projects\/OSBarcodeLib-iOS\/OSBarcodeLib\/Scanner\/Interface Elements\/OSBARCZoomSelectorView.swift",
+      "kind": "FloatLiteral",
+      "offset": 552,
+      "length": 3,
+      "value": "8.0"
+    },
+    {
+      "filePath": "\/Users\/rcj\/Documents\/Projects\/OSBarcodeLib-iOS\/OSBarcodeLib\/Scanner\/Interface Elements\/OSBARCZoomSelectorView.swift",
+      "kind": "FloatLiteral",
+      "offset": 652,
+      "length": 3,
+      "value": "4.0"
+    },
+    {
+      "filePath": "\/Users\/rcj\/Documents\/Projects\/OSBarcodeLib-iOS\/OSBarcodeLib\/Scanner\/Interface Elements\/OSBARCZoomSelectorView.swift",
+      "kind": "FloatLiteral",
+      "offset": 792,
+      "length": 4,
+      "value": "54.0"
+    },
+    {
       "filePath": "\/Users\/rcj\/Documents\/Projects\/OSBarcodeLib-iOS\/OSBarcodeLib\/Scanner\/OSBARCScannerViewController.swift",
       "kind": "StringLiteral",
       "offset": 144,
@@ -1479,9 +1542,23 @@
     {
       "filePath": "\/Users\/rcj\/Documents\/Projects\/OSBarcodeLib-iOS\/OSBarcodeLib\/Scanner\/Interface Elements\/OSBARCCancelButton.swift",
       "kind": "FloatLiteral",
-      "offset": 675,
+      "offset": 676,
       "length": 4,
-      "value": "32.0"
+      "value": "36.0"
+    },
+    {
+      "filePath": "\/Users\/rcj\/Documents\/Projects\/OSBarcodeLib-iOS\/OSBarcodeLib\/Scanner\/Interface Elements\/OSBARCCancelButton.swift",
+      "kind": "FloatLiteral",
+      "offset": 781,
+      "length": 4,
+      "value": "10.0"
+    },
+    {
+      "filePath": "\/Users\/rcj\/Documents\/Projects\/OSBarcodeLib-iOS\/OSBarcodeLib\/Scanner\/Interface Elements\/OSBARCCancelButton.swift",
+      "kind": "FloatLiteral",
+      "offset": 866,
+      "length": 4,
+      "value": "0.25"
     },
     {
       "filePath": "\/Users\/rcj\/Documents\/Projects\/OSBarcodeLib-iOS\/OSBarcodeLib\/Scanner\/Extensions\/Notification+ScanFrameChanged.swift",
