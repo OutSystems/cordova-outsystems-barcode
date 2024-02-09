@@ -1,4 +1,3 @@
-import Foundation
 import OSBarcodeLib
 
 struct OSBarcodeScanArgumentsModel: Decodable {
@@ -27,10 +26,10 @@ struct OSBarcodeScanArgumentsModel: Decodable {
         }
         
         let cameraDirectionInt = try container.decode(Int.self, forKey: .cameraDirection)
-        let cameraDirection = OSBARCCameraModel.map(value: cameraDirectionInt)
+        let cameraDirection = OSBARCCameraModel(value: cameraDirectionInt)
         
         let scanOrientationInt = try container.decode(Int.self, forKey: .scanOrientation)
-        let scanOrientation = OSBARCOrientationModel.map(value: scanOrientationInt)
+        let scanOrientation = OSBARCOrientationModel(value: scanOrientationInt)
         
         self.init(scanInstructions, scanButtonText, cameraDirection, scanOrientation)
     }

@@ -1,19 +1,19 @@
 import OSBarcodeLib
 
 protocol OSBARCArgumentMappable {
-    static func map(value: Int) -> Self
+    init(value: Int)
 }
 
 extension OSBARCCameraModel: OSBARCArgumentMappable {
-    static func map(value: Int) -> OSBARCCameraModel { value == 1 ? .back : .front }
+    init(value: Int) { self = value == 2 ? .front : .back }
 }
 
 extension OSBARCOrientationModel: OSBARCArgumentMappable {
-    static func map(value: Int) -> OSBARCOrientationModel {
+    init(value: Int) {
         switch value {
-        case 1: return .portrait
-        case 2: return .landscape
-        default: return .adaptive
+        case 1: self = .portrait
+        case 2: self = .landscape
+        default: self = .adaptive
         }
     }
 }
