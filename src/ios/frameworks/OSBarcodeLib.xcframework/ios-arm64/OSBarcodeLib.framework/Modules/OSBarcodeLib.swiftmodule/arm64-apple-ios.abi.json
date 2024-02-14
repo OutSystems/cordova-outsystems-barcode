@@ -27,6 +27,13 @@
       },
       {
         "kind": "Import",
+        "name": "QuartzCore",
+        "printedName": "QuartzCore",
+        "declKind": "Import",
+        "moduleName": "OSBarcodeLib"
+      },
+      {
+        "kind": "Import",
         "name": "SwiftUI",
         "printedName": "SwiftUI",
         "declKind": "Import",
@@ -433,6 +440,13 @@
       },
       {
         "kind": "Import",
+        "name": "AVFoundation",
+        "printedName": "AVFoundation",
+        "declKind": "Import",
+        "moduleName": "OSBarcodeLib"
+      },
+      {
+        "kind": "Import",
         "name": "SwiftUI",
         "printedName": "SwiftUI",
         "declKind": "Import",
@@ -442,6 +456,34 @@
         "kind": "Import",
         "name": "SwiftUI",
         "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "OSBarcodeLib"
+      },
+      {
+        "kind": "Import",
+        "name": "Combine",
+        "printedName": "Combine",
+        "declKind": "Import",
+        "moduleName": "OSBarcodeLib"
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "OSBarcodeLib"
+      },
+      {
+        "kind": "Import",
+        "name": "AVFoundation",
+        "printedName": "AVFoundation",
+        "declKind": "Import",
+        "moduleName": "OSBarcodeLib"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
         "declKind": "Import",
         "moduleName": "OSBarcodeLib"
       },
@@ -470,34 +512,6 @@
         "kind": "Import",
         "name": "SwiftUI",
         "printedName": "SwiftUI",
-        "declKind": "Import",
-        "moduleName": "OSBarcodeLib"
-      },
-      {
-        "kind": "Import",
-        "name": "AVFoundation",
-        "printedName": "AVFoundation",
-        "declKind": "Import",
-        "moduleName": "OSBarcodeLib"
-      },
-      {
-        "kind": "Import",
-        "name": "Combine",
-        "printedName": "Combine",
-        "declKind": "Import",
-        "moduleName": "OSBarcodeLib"
-      },
-      {
-        "kind": "Import",
-        "name": "SwiftUI",
-        "printedName": "SwiftUI",
-        "declKind": "Import",
-        "moduleName": "OSBarcodeLib"
-      },
-      {
-        "kind": "Import",
-        "name": "Vision",
-        "printedName": "Vision",
         "declKind": "Import",
         "moduleName": "OSBarcodeLib"
       },
@@ -793,6 +807,34 @@
         "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "OSBarcodeLib"
+      },
+      {
+        "kind": "Import",
+        "name": "AVFoundation",
+        "printedName": "AVFoundation",
+        "declKind": "Import",
+        "moduleName": "OSBarcodeLib"
+      },
+      {
+        "kind": "Import",
+        "name": "Combine",
+        "printedName": "Combine",
+        "declKind": "Import",
+        "moduleName": "OSBarcodeLib"
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "OSBarcodeLib"
+      },
+      {
+        "kind": "Import",
+        "name": "Vision",
+        "printedName": "Vision",
         "declKind": "Import",
         "moduleName": "OSBarcodeLib"
       },
@@ -1407,6 +1449,13 @@
       "value": "24.0"
     },
     {
+      "filePath": "\/Users\/rcj\/Documents\/Projects\/OSBarcodeLib-iOS\/OSBarcodeLib\/Scanner\/OSBARCScannerViewConfigurationValues.swift",
+      "kind": "FloatLiteral",
+      "offset": 651,
+      "length": 3,
+      "value": "1.0"
+    },
+    {
       "filePath": "\/Users\/rcj\/Documents\/Projects\/OSBarcodeLib-iOS\/OSBarcodeLib\/Scanner\/OSBARCScannerViewHostingController.swift",
       "kind": "StringLiteral",
       "offset": 81,
@@ -1437,23 +1486,9 @@
     {
       "filePath": "\/Users\/rcj\/Documents\/Projects\/OSBarcodeLib-iOS\/OSBarcodeLib\/Scanner\/OSBARCScannerView.swift",
       "kind": "BooleanLiteral",
-      "offset": 470,
+      "offset": 703,
       "length": 5,
       "value": "false"
-    },
-    {
-      "filePath": "\/Users\/rcj\/Documents\/Projects\/OSBarcodeLib-iOS\/OSBarcodeLib\/Scanner\/OSBARCScannerView.swift",
-      "kind": "BooleanLiteral",
-      "offset": 879,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/rcj\/Documents\/Projects\/OSBarcodeLib-iOS\/OSBarcodeLib\/Scanner\/OSBARCScannerView.swift",
-      "kind": "FloatLiteral",
-      "offset": 1179,
-      "length": 3,
-      "value": "1.0"
     },
     {
       "filePath": "\/Users\/rcj\/Documents\/Projects\/OSBarcodeLib-iOS\/OSBarcodeLib\/Scanner\/Interface Elements\/OSBARCZoomButton.swift",
@@ -1519,18 +1554,46 @@
       "value": "48.0"
     },
     {
-      "filePath": "\/Users\/rcj\/Documents\/Projects\/OSBarcodeLib-iOS\/OSBarcodeLib\/Scanner\/OSBARCScannerViewControllerCoordinator.swift",
+      "filePath": "\/Users\/rcj\/Documents\/Projects\/OSBarcodeLib-iOS\/OSBarcodeLib\/Scanner\/OSBARCScannerViewModel.swift",
+      "kind": "BooleanLiteral",
+      "offset": 397,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/rcj\/Documents\/Projects\/OSBarcodeLib-iOS\/OSBarcodeLib\/Scanner\/OSBARCScannerViewModel.swift",
+      "kind": "FloatLiteral",
+      "offset": 701,
+      "length": 3,
+      "value": "1.0"
+    },
+    {
+      "filePath": "\/Users\/rcj\/Documents\/Projects\/OSBarcodeLib-iOS\/OSBarcodeLib\/Scanner\/OSBARCScannerViewModel.swift",
       "kind": "Array",
-      "offset": 734,
+      "offset": 818,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/rcj\/Documents\/Projects\/OSBarcodeLib-iOS\/OSBarcodeLib\/Scanner\/OSBARCScannerViewControllerCoordinator.swift",
-      "kind": "StringLiteral",
-      "offset": 179,
-      "length": 38,
-      "value": "\"OSBarcodeLib.OSBARCScannerViewControllerCoordinator\""
+      "filePath": "\/Users\/rcj\/Documents\/Projects\/OSBarcodeLib-iOS\/OSBarcodeLib\/Scanner\/CameraManager\/OSBARCCaptureSessionManager.swift",
+      "kind": "FloatLiteral",
+      "offset": 893,
+      "length": 3,
+      "value": "0.5"
+    },
+    {
+      "filePath": "\/Users\/rcj\/Documents\/Projects\/OSBarcodeLib-iOS\/OSBarcodeLib\/Scanner\/CameraManager\/OSBARCCaptureSessionManager.swift",
+      "kind": "FloatLiteral",
+      "offset": 916,
+      "length": 3,
+      "value": "1.0"
+    },
+    {
+      "filePath": "\/Users\/rcj\/Documents\/Projects\/OSBarcodeLib-iOS\/OSBarcodeLib\/Scanner\/CameraManager\/OSBARCCaptureSessionManager.swift",
+      "kind": "FloatLiteral",
+      "offset": 939,
+      "length": 3,
+      "value": "2.0"
     },
     {
       "filePath": "\/Users\/rcj\/Documents\/Projects\/OSBarcodeLib-iOS\/OSBarcodeLib\/Scanner\/Interface Elements\/OSBARCCancelButton.swift",
@@ -1566,6 +1629,34 @@
       "offset": 172,
       "length": 18,
       "value": "\"scanFrameChanged\""
+    },
+    {
+      "filePath": "\/Users\/rcj\/Documents\/Projects\/OSBarcodeLib-iOS\/OSBarcodeLib\/Scanner\/Extensions\/Notification+ScanFrameChanged.swift",
+      "kind": "StringLiteral",
+      "offset": 333,
+      "length": 21,
+      "value": "\"scanButtonSelection\""
+    },
+    {
+      "filePath": "\/Users\/rcj\/Documents\/Projects\/OSBarcodeLib-iOS\/OSBarcodeLib\/Scanner\/CameraManager\/OSBARCCaptureOutputDecoder.swift",
+      "kind": "Array",
+      "offset": 692,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/rcj\/Documents\/Projects\/OSBarcodeLib-iOS\/OSBarcodeLib\/Scanner\/CameraManager\/OSBARCCaptureOutputDecoder.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1606,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/rcj\/Documents\/Projects\/OSBarcodeLib-iOS\/OSBarcodeLib\/Scanner\/CameraManager\/OSBARCCaptureOutputDecoder.swift",
+      "kind": "StringLiteral",
+      "offset": 158,
+      "length": 26,
+      "value": "\"OSBarcodeLib.OSBARCCaptureOutputDecoder\""
     }
   ]
 }
