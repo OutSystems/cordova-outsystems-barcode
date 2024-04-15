@@ -5,6 +5,7 @@
 import AVFoundation
 import Combine
 import Foundation
+import QuartzCore
 import Swift
 import SwiftUI
 import UIKit

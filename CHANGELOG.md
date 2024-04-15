@@ -6,16 +6,34 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 The changes documented here do not include those from the original repository.
 
+## [1.1.0]
+
+### Android
+
+#### Chores
+- Update library to include the zoom feature (https://outsystemsrd.atlassian.net/browse/RMET-2987).
+
+### iOS
+
+#### Chores
+- Update library to include the zoom feature (https://outsystemsrd.atlassian.net/browse/RMET-2986).
+
+#### Refactors
+- Replace `OSBARCArgumentMappable` static method with an initialiser.
+
 ## [1.0.0]
 
 ### iOS
 
-- Fix error codes and messages (https://outsystemsrd.atlassian.net/browse/RMET-3038).
+#### Features
 - Add `scanOrientation` argument to `scanBarcode` (https://outsystemsrd.atlassian.net/browse/RMET-2753).
 - Add `cameraDirection` argument to `scanBarcode` (https://outsystemsrd.atlassian.net/browse/RMET-2754).
 - Add `scanButtonText` argument to `scanBarcode` (https://outsystemsrd.atlassian.net/browse/RMET-2752).
 - Add `scanInstructions` argument to `scanBarcode` (https://outsystemsrd.atlassian.net/browse/RMET-2751).
 - Implement `scanBarcode` (https://outsystemsrd.atlassian.net/browse/RMET-2748).
+
+#### Fixes
+- Fix error codes and messages (https://outsystemsrd.atlassian.net/browse/RMET-3038).
 
 ### Android
 
