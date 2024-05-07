@@ -3,15 +3,15 @@
   <name>OSBarcode</name>
   <description>Cordova Bridge for the OutSystems Officially Supported Barcode Plugin.</description>
   <author>OutSystems Inc</author>
-  <js-module name="OSBarcode" src="www/OSBarcode.js">
+  <js-module name="OSBarcode" src="cordova/www/OSBarcode.js">
     <clobbers target="cordova.plugins.OSBarcode"/>
   </js-module>
 
-  <js-module name="OSBarcodeScanner" src="www/OSBarcodeScanner.js">
+  <js-module name="OSBarcodeScanner" src="cordova/www/OSBarcodeScanner.js">
     <clobbers target="cordova.plugins.OSBarcodeScanner"/>
   </js-module>
 
-  <js-module name="OSBarcodeConstants" src="www/OSBarcodeConstants.js">
+  <js-module name="OSBarcodeConstants" src="cordova/www/OSBarcodeConstants.js">
     <clobbers target="OSBarcodeConstants"/>
   </js-module>
 
@@ -24,8 +24,8 @@
       <preference name="GradlePluginKotlinCodeStyle" value="official" />
     </config-file>
     <config-file parent="/*" target="AndroidManifest.xml"/>
-    <source-file src="src/android/com/outsystems/plugins/barcode/OSBarcode.kt" target-dir="app/src/main/kotlin/com/outsystems/plugins/barcode"/>
-    <framework src="src/android/com/outsystems/plugins/barcode/build.gradle" custom="true" type="gradleReference" />
+    <source-file src="cordova/src/android/com/outsystems/plugins/barcode/OSBarcode.kt" target-dir="app/src/main/kotlin/com/outsystems/plugins/barcode"/>
+    <framework src="cordova/src/android/com/outsystems/plugins/barcode/build.gradle" custom="true" type="gradleReference" />
   </platform>
   <platform name="ios">
     <config-file parent="/*" target="config.xml">
@@ -41,12 +41,12 @@
       <string>$CAMERA_USAGE_DESCRIPTION</string>
     </config-file>
 
-    <source-file src="src/ios/OSBarcode.swift" />
-    <source-file src="src/ios/OSBarcodeError.swift" />
-    <source-file src="src/ios/OSBarcodeScanArgumentsModel.swift" />
+    <source-file src="cordova/src/ios/OSBarcode.swift" />
+    <source-file src="cordova/src/ios/OSBarcodeError.swift" />
+    <source-file src="cordova/src/ios/OSBarcodeScanArgumentsModel.swift" />
 
-    <source-file src="src/ios/frameworks/OSBARCArgumentMappable.swift" target-dir="extensions" />
-    <framework src="src/ios/frameworks/OSBarcodeLib.xcframework" embed="true" custom="true" />
+    <source-file src="cordova/src/ios/frameworks/OSBARCArgumentMappable.swift" target-dir="extensions" />
+    <framework src="cordova/src/ios/frameworks/OSBarcodeLib.xcframework" embed="true" custom="true" />
 
   </platform>
 </plugin>
