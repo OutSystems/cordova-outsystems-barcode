@@ -1,0 +1,43 @@
+name: (O11) Deploy Plugin
+
+on:
+  pull_request:
+  workflow_dispatch:
+    inputs:
+      to:
+        description: 'Target O11 Enviorment'
+        required: true
+        default: qa
+        type: choice
+        options:
+          - Testing
+          - Production
+      from:
+        description: 'Source O11 Enviorment'
+        required: true
+        default: qa
+        type: choice
+        options:
+          - Development
+          - Testing
+
+
+jobs:    
+  deploy:
+    name: Deploy to ${{ github.event.inputs.to }}
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: 18
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Deploying from DEV to TST 
+      run: npm run deploy --plugin=BarcodeAutomation --from=Development --to=Testing --lifetime=${{ secrets.LIFETIME }} --authentication="${{ secrets.AUTOMATION_TOKEN }}"
+    

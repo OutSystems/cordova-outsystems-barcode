@@ -7,6 +7,17 @@
     "cordova-android",
     "cordova-ios"
   ],
+  "scripts": {
+    "update:tag": "node ./scripts/change-extensibility.js",
+    "deploy": "node ./scripts/deploy.js",
+		"bump:version:major": "node ./scripts/bump-version major",
+		"bump:version:minor": "node ./scripts/bump-version minor",
+		"bump:version:patch": "node ./scripts/bump-version patch",
+		"bump:version:pre": "node ./scripts/bump-version prerelease"
+	},
+  "devDependencies": {
+   
+  },
   "cordova": {
     "id": "com.outsystems.plugins.barcode",
     "platforms": [
