@@ -1,48 +1,3 @@
-
-if(process.env.npm_config_from == null || process.env.npm_config_to == null) {
-    throw new Error("Missing repositoryURL, branch, environment arguments");
-}
-
-if(process.env.npm_config_authentication == null) {
-    throw new Error("Missing authentication argument");
-}
-
-let pluginSpaceName = process.env.npm_config_plugin;
-let fromEnvironment = process.env.npm_config_from;
-let toEnvironment = process.env.npm_config_to;
-let basicAuthentication = process.env.npm_config_authentication;
-let baseURL = process.env.npm_config_lifetime;
-
-baseURL = `https://${baseURL}/lifetimeapi/rest/v2`;
-
-startDeploy(baseURL, fromEnvironment, toEnvironment, pluginSpaceName, basicAuthentication);
-
-async function startDeploy(baseURL, fromEnvironment, toEnvironment, pluginSpaceName, auth){
-   let fromKey = await getEnvironmentKey(baseURL, fromEnvironment, auth);
-   let toKey = await getEnvironmentKey(baseURL, toEnvironment, auth);
-
-   let pluginKey = await getAppKey(baseURL, pluginSpaceName, fromKey, auth)
-
-   let deploymentKey = createDeploymentPlan(baseURL, fromKey, toKey, pluginKey, auth);
-
-   //TODO: check for conflicts + slack message for approval if conflicts were found
-   await startDeployment(baseURL, deploymentKey, auth);
-
-   while(!isFinished(baseURL, deploymentKey, basicAuthentication)){
-        //we wait until it's finished
-        sleep(5000);
-   }
-
-}
-
-function sleep(milliseconds) {
-    const date = Date.now();
-    let currentDate = null;
-    do {
-      currentDate = Date.now();
-    } while (currentDate - date < milliseconds);
-}
-
 async function getEnvironmentKey(base, env, auth){
     let url =  `${base}/environments`;
     
@@ -56,12 +11,12 @@ async function getEnvironmentKey(base, env, auth){
 
     if(response.ok && response.status == 200){
         let list = await response.json();
-        return list.filter((detail) => detail.EnvironmentType == env)[0]
+        return (list.filter((detail) => detail.Name == env)[0]).Key
     }
 }
 
 async function getAppKey(base, pluginSpaceName, inEnv, auth){
-    let url =  `${base}/applicationss?IncludeEnvStatus=true`;
+    let url =  `${base}/applications?IncludeEnvStatus=true`;
     
     let response = await fetch(url, {
         method: 'GET',
@@ -70,11 +25,12 @@ async function getAppKey(base, pluginSpaceName, inEnv, auth){
             Authorization: auth
         }
     })
-
+    
     if(response.ok && response.status == 200){
         let list = await response.json();
-        let app = list.filter((a) => a.name == pluginSpaceName);
-        return app.AppStatusInEnvs.filter((status) => status.EnvironmentKey == inEnv)[0]
+        
+        let app = list.filter((a) => a.Name == pluginSpaceName)[0];
+        return (app.AppStatusInEnvs.filter((status) => status.EnvironmentKey == inEnv)[0]).BaseApplicationVersionKey
     }
 }
 
@@ -90,6 +46,7 @@ async function createDeploymentPlan(base, fromEnv, toEnv, pluginKey, auth) {
             }
         ] 
 	};
+    console.log(body)
 
     const response = await fetch(url, {
         method: "POST", 
@@ -99,12 +56,12 @@ async function createDeploymentPlan(base, fromEnv, toEnv, pluginKey, auth) {
         },
         body: JSON.stringify(body)
     })
-    console.log(response)
     
-    if(response.ok && response.status == 200){
-        let res = await response.json()
-        console.log("Deployment Response:" + res);
-        return response.json();
+    
+    if(response.ok && response.status == 201){
+        let key = await response.text()
+        console.log("Deployment Response:" + key);
+        return key;
     }
 }
 
@@ -118,9 +75,8 @@ async function startDeployment(base, deployKey, auth){
             Authorization: auth
         }
     })
-    console.log(response)
     
-    if(response.ok && response.status == 202){
+    if(response.ok && response.status == 202){ 
         console.log("Deployment Started Successfully!");   
     }
 }
@@ -143,7 +99,6 @@ async function isFinished(base, deployKey, auth) {
             return false
         } 
         if(status.DeploymentStatus == 'aborted'){
-            
             throw Error ("!! Deployment aborted !!");
         }
         if(status.DeploymentStatus == 'finished_with_errors'){
@@ -162,3 +117,48 @@ async function isFinished(base, deployKey, auth) {
     }
     throw Error ("!! Something went wrong with the request: " + await res.json());
 }
+
+
+if(process.env.npm_config_from == null || process.env.npm_config_to == null) {
+    throw new Error("Missing repositoryURL, branch, environment arguments");
+}
+
+if(process.env.npm_config_authentication == null) {
+    throw new Error("Missing authentication argument");
+}
+
+let pluginSpaceName = process.env.npm_config_plugin;
+let fromEnvironment = process.env.npm_config_from;
+let toEnvironment = process.env.npm_config_to;
+let basicAuthentication = process.env.npm_config_authentication;
+let baseURL = process.env.npm_config_lifetime;
+
+baseURL = `https://${baseURL}/lifetimeapi/rest/v2`;
+
+startDeploy(baseURL, fromEnvironment, toEnvironment, pluginSpaceName, basicAuthentication);
+
+async function startDeploy(baseURL, fromEnvironment, toEnvironment, pluginSpaceName, auth){
+   let fromKey = await getEnvironmentKey(baseURL, fromEnvironment, auth);
+   let toKey = await getEnvironmentKey(baseURL, toEnvironment, auth);
+   let pluginKey = await getAppKey(baseURL, pluginSpaceName, fromKey, auth)
+
+   let deploymentKey = await createDeploymentPlan(baseURL, fromKey, toKey, pluginKey, auth);
+   console.log("deployment key: " + deploymentKey)
+
+   //TODO: check for conflicts + slack message for approval if conflicts were found
+   await startDeployment(baseURL, deploymentKey, auth);
+   
+   let intervalId = setInterval(async () => {
+        let finished = await isFinished(baseURL, deploymentKey, basicAuthentication);
+        if(!finished) {
+            console.log("Will check again in a while...");
+        } else {
+            clearInterval(intervalId);
+        }
+   }, 10000)
+
+
+}
+
+
+

@@ -1,29 +1,11 @@
-name: (O11) Deploy Plugin
+name: (O11) Release Plugin
 
 on:
-  workflow_dispatch:
-    inputs:
-      to:
-        description: 'Target O11 Enviorment'
-        required: true
-        default: qa
-        type: choice
-        options:
-          - Testing
-          - Production
-      from:
-        description: 'Source O11 Enviorment'
-        required: true
-        default: qa
-        type: choice
-        options:
-          - Development
-          - Testing
-
+  pull_request:
 
 jobs:    
   deploy:
-    name: Deploy to ${{ github.event.inputs.to }}
+    name: Release plugin via LifeTime
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
@@ -39,4 +21,7 @@ jobs:
 
     - name: Deploying from DEV to TST 
       run: npm run deploy --plugin=BarcodeAutomation --from=Development --to=Testing --lifetime=${{ secrets.LIFETIME }} --authentication=${{ secrets.AUTOMATION_TOKEN }}
+    
+    - name: Deploying from TST to PROD 
+      run: npm run deploy --plugin=BarcodeAutomation --from=Testing --to=Production --lifetime=${{ secrets.LIFETIME }} --authentication=${{ secrets.AUTOMATION_TOKEN }}
     
