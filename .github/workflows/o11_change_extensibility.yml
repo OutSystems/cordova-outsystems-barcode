@@ -1,0 +1,46 @@
+name: (O11) Update Extensibility
+
+on:
+  workflow_dispatch:
+    inputs:
+      tag: 
+        description: 'The repo version tag'
+        required: true
+        default: '0.0.1'
+      forgeVersion:
+        description: 'The plugin version on the forge'
+        required: true
+        default: '0.0.1'
+      mabsMin:
+        description: 'Minimum MABS version'
+        required: true
+        default: '9.0.0'
+      enviroment:
+        description: 'O11 Enviorment'
+        required: true
+        default: enmobile11-dev.outsystemsenterprise.com
+        type: choice
+        options:
+          - enmobile11-dev.outsystemsenterprise.com
+          - enmobile11-tst.outsystemsenterprise.com
+          - enmobile11.outsystemsenterprise.com
+
+jobs:    
+  deploy:
+    name: Change OML Extensibility
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: 18
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Update Extensibility Configurations JSON
+      run: npm run update:tag --plugin=BarcodeAutomation --name="Barcode Automation" --mabs=${{ github.event.inputs.mabsMin }} --environment=${{ github.event.inputs.enviroment }} --repository=${{ github.repository }} --forge=${{ github.event.inputs.forgeVersion }} --branch=${{ github.event.inputs.tag }} --authentication="${{ secrets.BASICAUTH }}"
+    
