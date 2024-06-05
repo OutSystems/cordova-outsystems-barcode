@@ -6,6 +6,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 The changes documented here do not include those from the original repository.
 
+## [1.1.2]
+
+### 21-05-2024
+- Fix: Updates dependency to `OSBarcodeLib-Android`, adding serializable annotation to avoid problems with code obfuscation (https://outsystemsrd.atlassian.net/browse/RMET-3394).
+
 ## [1.1.1]
 
 ### 30-04-2024
