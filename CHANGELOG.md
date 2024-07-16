@@ -6,6 +6,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 The changes documented here do not include those from the original repository.
 
+## [1.1.3]
+
+### 16-06-2024
+- Fix: [Android] Update dependency to `oscordova`, to fix incompatibility with other plugins (https://outsystemsrd.atlassian.net/browse/RMET-3540)
+
 ## [1.1.2]
 
 ### 21-05-2024

@@ -70,6 +70,10 @@ class OSBarcode : CordovaImplementation() {
         return true
     }
 
+    override fun onResume(multitasking: Boolean) {
+        // Not used in this project.
+    }
+
     private fun scan(args: JSONArray) {
         setAsActivityResultCallback()
         val parameters = buildScanParameters(args)
