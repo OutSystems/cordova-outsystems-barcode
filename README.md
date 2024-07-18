@@ -78,6 +78,7 @@ The action is composed of the following parameters:
 	- **scanButton**: A boolean that will display a scan button on the barcode reader. With the button, scanning will only be triggered when pressing the button instead of automatically when framing the barcode. A second click on the button disables scannning.
 	- **scanText**: A text to be displayed on the scan button. It will only be shown if **scanButton** is set to true.
 	- **androidScanningLibrary**: A text equivalent to the **OSBarcodeConstants.AndroidScanningLibrary** structure. It indicates which library will be used to perform the scan: MLKit or ZXing. As the name indicates, it's only applicable to "Android".
+	- **scanInterval**: This is an integer value that represents the amount of delay (in milliseconds) we want to add to the ML Kit image processing to optimize the memory consumption during scanning on Android. This adjustment is only for ML Kit and will not affect ZXing.
 - **successCallback**: A structure indicating that the action was successful. It returns a **ScanResult**: a text containing the value associated with the scanned barcode.
 - **errorCallback**: A structure indicating that the action was not successful. It returns an "error" structure, composed of:
 	- **code**: A text containing the error code.
