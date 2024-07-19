@@ -2,11 +2,37 @@ name: (O11) Release Plugin
 
 on:
   pull_request:
+  workflow_dispatch:
+    inputs:
+      tag: 
+        description: 'The repo version tag'
+        required: true
+        default: '0.0.1'
+      forgeVersion:
+        description: 'The plugin version on the forge'
+        required: true
+        default: '0.0.1'
+      mabsMin:
+        description: 'Minimum MABS version'
+        required: true
+        default: '9.0.0'
 
 jobs:    
+  change-extesnsibility:
+    uses: ./.github/workflows/o11_change_extensibility.yml
+    name: Update OML Extensibility
+    secrets: inherit
+    with:
+      tag: ${{ inputs.tag }}
+      forgeVersion: ${{ inputs.forgeVersion }}
+      mabsMin: ${{ inputs.mabsMin }}
+      environment: enmobile11-dev.outsystemsenterprise.com
+    
+
   deploy:
     name: Release plugin via LifeTime
     runs-on: ubuntu-latest
+    needs: change-extesnsibility
     steps:
     - name: Checkout
       uses: actions/checkout@v4
@@ -18,10 +44,13 @@ jobs:
 
     - name: Install dependencies
       run: npm install
+    
+    - name: Tag Plugin with Version 
+      run: npm run update:version --plugin=BarcodeAutomation --lifetime=${{ secrets.LIFETIME}} --authentication='${{secrets.AUTOMATION_TOKEN}}'
 
     - name: Deploying from DEV to TST 
-      run: npm run deploy --plugin=BarcodeAutomation --from=Development --to=Testing --lifetime=${{ secrets.LIFETIME }} --authentication=${{ secrets.AUTOMATION_TOKEN }}
+      run: npm run deploy --plugin=BarcodeAutomation --from=Development --to=Testing --lifetime=${{ secrets.LIFETIME }} --authentication='${{ secrets.AUTOMATION_TOKEN }}'
     
     - name: Deploying from TST to PROD 
-      run: npm run deploy --plugin=BarcodeAutomation --from=Testing --to=Production --lifetime=${{ secrets.LIFETIME }} --authentication=${{ secrets.AUTOMATION_TOKEN }}
+      run: npm run deploy --plugin=BarcodeAutomation --from=Testing --to=Production --lifetime=${{ secrets.LIFETIME }} --authentication='${{ secrets.AUTOMATION_TOKEN }}'
     

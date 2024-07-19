@@ -23,7 +23,7 @@ on:
 
 jobs:    
   deploy:
-    name: Deploy to ${{ github.event.inputs.to }}
+    name: Deploy to ${{ inputs.to }}
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
@@ -38,5 +38,5 @@ jobs:
       run: npm install
 
     - name: Deploying from DEV to TST 
-      run: npm run deploy --plugin=BarcodeAutomation --from=Development --to=Testing --lifetime=${{ secrets.LIFETIME }} --authentication=${{ secrets.AUTOMATION_TOKEN }}
+      run: npm run deploy --plugin=BarcodeAutomation --from=${{ inputs.from }} --to=${{ inputs.to }} --lifetime=${{ secrets.LIFETIME }} --authentication='${{ secrets.AUTOMATION_TOKEN }}'
     

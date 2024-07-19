@@ -1,32 +1,23 @@
 name: (O11) Update Extensibility
 
 on:
-  workflow_dispatch:
+  workflow_call:
     inputs:
       tag: 
-        description: 'The repo version tag'
         required: true
-        default: '0.0.1'
+        type: string
       forgeVersion:
-        description: 'The plugin version on the forge'
         required: true
-        default: '0.0.1'
+        type: string
       mabsMin:
-        description: 'Minimum MABS version'
         required: true
-        default: '9.0.0'
-      enviroment:
-        description: 'O11 Enviorment'
+        type: string
+      environment:
         required: true
-        default: enmobile11-dev.outsystemsenterprise.com
-        type: choice
-        options:
-          - enmobile11-dev.outsystemsenterprise.com
-          - enmobile11-tst.outsystemsenterprise.com
-          - enmobile11.outsystemsenterprise.com
-
+        type: string
+        
 jobs:    
-  deploy:
+  update:
     name: Change OML Extensibility
     runs-on: ubuntu-latest
     steps:
@@ -42,5 +33,5 @@ jobs:
       run: npm install
 
     - name: Update Extensibility Configurations JSON
-      run: npm run update:tag --plugin=BarcodeAutomation --name="Barcode Automation" --mabs=${{ github.event.inputs.mabsMin }} --environment=${{ github.event.inputs.enviroment }} --repository=${{ github.repository }} --forge=${{ github.event.inputs.forgeVersion }} --branch=${{ github.event.inputs.tag }} --authentication="${{ secrets.BASICAUTH }}"
+      run: npm run update:tag --plugin=BarcodeAutomation --name="InAppBrowser Plugin" --mabs=${{ inputs.mabsMin }} --environment=${{ inputs.environment }} --repository=${{ github.repository }} --forge=${{ inputs.forgeVersion }} --branch=${{ inputs.tag }} --authentication="${{ secrets.BASICAUTH }}"
     
