@@ -46,7 +46,14 @@
     <source-file src="src/ios/OSBarcodeScanArgumentsModel.swift" />
 
     <source-file src="src/ios/frameworks/OSBARCArgumentMappable.swift" target-dir="extensions" />
-    <framework src="src/ios/frameworks/OSBarcodeLib.xcframework" embed="true" custom="true" />
 
+    <podspec>
+      <config>
+        <source url="https://cdn.cocoapods.org/"/>
+      </config>
+      <pods use-frameworks="true">
+        <pod name="OSBarcodeLib" spec="1.1.0" />
+      </pods>
+    </podspec>
   </platform>
 </plugin>
