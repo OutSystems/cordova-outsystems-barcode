@@ -6,6 +6,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 The changes documented here do not include those from the original repository.
 
+## [Unreleased]
+
+### iOS
+
+#### Chores
+- Replace `xcframework` by `pod` (https://outsystemsrd.atlassian.net/browse/RMET-3587).
+- Remove `add-swift-support` dependency and use the `SwiftVersion` preference.
+
 ## [1.1.3]
 
 ### 16-06-2024
