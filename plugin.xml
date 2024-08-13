@@ -44,7 +44,7 @@
     <source-file src="src/ios/OSBarcodeError.swift" />
     <source-file src="src/ios/OSBarcodeScanArgumentsModel.swift" />
 
-    <source-file src="src/ios/frameworks/OSBARCArgumentMappable.swift" target-dir="extensions" />
+    <source-file src="src/ios/OSBARCArgumentMappable.swift" target-dir="extensions" />
 
     <podspec>
       <config>
