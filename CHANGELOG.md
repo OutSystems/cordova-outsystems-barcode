@@ -6,6 +6,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 The changes documented here do not include those from the original repository.
 
+## [1.1.5]
+
+### 22-08-2024
+- Fix: Avoid UI bug on background when layout is portrait (https://outsystemsrd.atlassian.net/browse/RMET-3379).
+
 ## [1.1.4]
 
 ### iOS
