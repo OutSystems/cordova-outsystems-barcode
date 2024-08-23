@@ -28,17 +28,13 @@ class OSBarcode : CordovaImplementation() {
         callbackContext: CallbackContext
     ): Boolean {
         this.callbackContext = callbackContext
-        val result = runBlocking {
-            when (action) {
-                "scanBarcode" -> {
-                    scan(args)
-                }
-
-                else -> false
+        when (action) {
+            "scanBarcode" -> {
+                scan(args)
+                return true
             }
-            true
+            else -> return false
         }
-        return result
     }
 
     override fun initialize(cordova: CordovaInterface, webView: CordovaWebView) {
