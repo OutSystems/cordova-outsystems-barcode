@@ -6,6 +6,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 The changes documented here do not include those from the original repository.
 
+## [1.1.5]
+
+### 27-08-2024
+- Fix: iOS - Use confidence level for code readings (https://outsystemsrd.atlassian.net/browse/RMET-3374).
+
+### 23-08-2024
+- Fix: Android - Stop using runBlocking when scanning a code (https://outsystemsrd.atlassian.net/browse/RMET-3379).
+
+### 22-08-2024
+- Fix: Android - Avoid UI bug on background when layout is portrait (https://outsystemsrd.atlassian.net/browse/RMET-3379).
+
 ## [1.1.4]
 
 ### iOS
