@@ -51,7 +51,7 @@
         <source url="https://cdn.cocoapods.org/"/>
       </config>
       <pods use-frameworks="true">
-        <pod name="OSBarcodeLib" spec="1.1.1" />
+        <pod name="OSBarcodeLib" spec="1.1.2" />
       </pods>
     </podspec>
   </platform>
