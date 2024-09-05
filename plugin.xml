@@ -20,8 +20,6 @@
       <feature name="OSBarcode">
         <param name="android-package" value="com.outsystems.plugins.barcode.OSBarcode"/>
       </feature>
-      <preference name="GradlePluginKotlinEnabled" value="true" />
-      <preference name="GradlePluginKotlinCodeStyle" value="official" />
     </config-file>
     <config-file parent="/*" target="AndroidManifest.xml"/>
     <source-file src="src/android/com/outsystems/plugins/barcode/OSBarcode.kt" target-dir="app/src/main/kotlin/com/outsystems/plugins/barcode"/>
