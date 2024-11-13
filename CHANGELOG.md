@@ -8,6 +8,9 @@ The changes documented here do not include those from the original repository.
 
 ## [Unreleased]
 
+### 11-11-2024
+- Chore: Remove unneeded `kotlin-kapt` plugin (https://outsystemsrd.atlassian.net/browse/RMET-3803).
+
 ### 08-11-2024
 - Fix: Android - Update libraries for supporting 16KB page size (https://outsystemsrd.atlassian.net/browse/RMET-3602)
 
