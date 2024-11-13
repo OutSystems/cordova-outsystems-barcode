@@ -8,10 +8,14 @@ The changes documented here do not include those from the original repository.
 
 ## [Unreleased]
 
-### Android
+### 11-11-2024
+- Chore: Android - Remove unneeded `kotlin-kapt` plugin (https://outsystemsrd.atlassian.net/browse/RMET-3803).
 
-#### Chores
-- Remove unneeded `kotlin-kapt` plugin (https://outsystemsrd.atlassian.net/browse/RMET-3803).
+### 08-11-2024
+- Fix: Android - Update libraries for supporting 16KB page size (https://outsystemsrd.atlassian.net/browse/RMET-3602)
+
+### 05-11-2024
+- Fix: Android - Edge-to-edge support on Android 15 (https://outsystemsrd.atlassian.net/browse/RMET-3597)
 
 ## [1.1.6]
 
