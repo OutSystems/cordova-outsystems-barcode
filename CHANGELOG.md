@@ -8,6 +8,9 @@ The changes documented here do not include those from the original repository.
 
 ## [Unreleased]
 
+### 03-12-2024
+- Chore: Android - Bump Kotlin and Gradle versions (https://outsystemsrd.atlassian.net/browse/RMET-3887)
+
 ### 26-11-2024
 - Feature: Android - Support Edge-to-Edge on all Android versions.
 
