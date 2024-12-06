@@ -6,6 +6,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 The changes documented here do not include those from the original repository.
 
+## [1.2.0]
+
+### 03-12-2024
+- Chore: Android - Bump Kotlin and Gradle versions (https://outsystemsrd.atlassian.net/browse/RMET-3887)
+
+### 26-11-2024
+- Feature: Android - Support Edge-to-Edge on all Android versions.
+
 ## [1.1.7]
 
 ### 11-11-2024
