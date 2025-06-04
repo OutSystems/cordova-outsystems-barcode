@@ -11,7 +11,16 @@ exports.scanBarcode = function (options, successCallback, errorCallback) {
     let hint = options.hint;
     let androidScanningLibrary = options.androidScanningLibrary;
 
-    let args = [{scanInstructions, cameraDirection, scanOrientation, scanButton, scanText, hint, androidScanningLibrary}];
+    let args = [{ scanInstructions, cameraDirection, scanOrientation, scanButton, scanText, hint, androidScanningLibrary }];
 
     exec(successCallback, errorCallback, 'OSBarcode', 'scanBarcode', args);
+}
+
+exports.testMethod = function (options, successCallback, errorCallback) {
+    options = options || {};
+
+
+    let args = null
+
+    exec(successCallback, errorCallback, 'OSBarcode', 'testMethod', args);
 }
