@@ -38,7 +38,7 @@ class OSBarcode: CDVPlugin {
     // TODO: add things here
 
     @objc(testMethod:)
-    func testMethod(command _: CDVInvokedUrlCommand) {
+    func testMethod(command: CDVInvokedUrlCommand) {
         print("===============> testMethod was called xxx!")
 
         send(successfulResult: "xxxxxx", for: command.callbackId)
