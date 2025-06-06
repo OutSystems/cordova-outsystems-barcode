@@ -36,12 +36,23 @@ class OSBarcode: CDVPlugin {
     }
 
     // TODO: add things here
-
     @objc(testMethod:)
     func testMethod(command: CDVInvokedUrlCommand) {
-        print("===============> testMethod was called xxx!")
+        print("#################### testMethod was called ####################")
 
-        send(successfulResult: "xxxxxx", for: command.callbackId)
+        guard let argumentsDictionary = command.argument(at: 0) as? [String: Any],
+              let argumentsData = try? JSONSerialization.data(withJSONObject: argumentsDictionary),
+              let argumentsModel = try? JSONDecoder().decode(OSBarcodeTestArgumentsModel.self, from: argumentsData)
+        else {
+            return sendTest(error: .invalidData, for: command.callbackId)
+        }
+
+        print("Name: \(argumentsModel.name)")
+        print("Address: \(argumentsModel.address)")
+        print("Date: \(argumentsModel.date)")
+
+        let response = "Received: \(argumentsModel.name), \(argumentsModel.address), \(argumentsModel.date)"
+        send(successfulResult: response, for: command.callbackId)
     }
 }
 
