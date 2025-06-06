@@ -5,8 +5,6 @@
 //  Created by Rui Mendes on 06/06/2025.
 //
 
-import Foundation
-
 enum OSBarcodeTestError {
     case invalidData
 
