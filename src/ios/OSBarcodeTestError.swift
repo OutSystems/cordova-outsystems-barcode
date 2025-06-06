@@ -6,7 +6,7 @@
 //
 
 enum OSBarcodeTestError {
-    case invalidData
+    case invalidData = 0
 
     var errorDictionary: [String: String] {
         switch self {
