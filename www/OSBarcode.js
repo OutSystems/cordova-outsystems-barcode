@@ -18,11 +18,11 @@ exports.scanBarcode = function (options, successCallback, errorCallback) {
 
 exports.testMethod = function (options, successCallback, errorCallback) {
     options = options || {};
-
+    console.log("================================= 22222", options.name);
     let name = options.name
     let address = options.address
-    let date = new Date().toISOString()
+    let date = options.date
 
     let args = [{ name, address, date }];
-    exec(successCallback, errorCallback, 'OSBarcode', 'testMethod', [args]);
+    exec(successCallback, errorCallback, 'OSBarcode', 'testMethod', args);
 }
