@@ -40,10 +40,7 @@ class OSBarcode: CDVPlugin {
 
     @objc(testMethod:)
     func testMethod(command: CDVInvokedUrlCommand) {
-        print("#################### testMethod was called ####################")
-
-        let argumentsDictionary = command.argument(at: 0) as? [String: Any]
-        print("================> ", argumentsDictionary)
+        print("#################### decode ####################")
 
         guard let argumentsDictionary = command.argument(at: 0) as? [String: Any],
               let argumentsData = try? JSONSerialization.data(withJSONObject: argumentsDictionary),
@@ -56,8 +53,21 @@ class OSBarcode: CDVPlugin {
         print("Address: \(argumentsModel.address)")
         print("Date: \(argumentsModel.date)")
 
-        let response = "Received: \(argumentsModel.name), \(argumentsModel.address), \(argumentsModel.date)"
-        send(successfulResult: response, for: command.callbackId)
+        let responseDict: [String: Any] = [
+            "name": argumentsModel.name,
+            "address": argumentsModel.address,
+            "date": argumentsModel.date,
+        ]
+
+        print("#################### encode ####################")
+
+        if let jsonData = try? JSONSerialization.data(withJSONObject: responseDict, options: []),
+           let jsonString = String(data: jsonData, encoding: .utf8)
+        {
+            send(successfulResult: jsonString, for: command.callbackId)
+        } else {
+            sendTest(error: .encodingError, for: command.callbackId)
+        }
     }
 }
 

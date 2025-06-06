@@ -10,5 +10,5 @@ import OSBarcodeLib
 struct OSBarcodeTestArgumentsModel: Decodable {
     let name: String
     let address: String
-    let date: Date
+    let date: String
 }
