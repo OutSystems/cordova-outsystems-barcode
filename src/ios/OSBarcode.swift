@@ -25,6 +25,7 @@ class OSBarcode: CDVPlugin {
                     guard let scannedBarcode = try await self.plugin?.scanBarcode(with: argumentsModel.scanInstructions, argumentsModel.scanButtonText, argumentsModel.cameraDirection, and: argumentsModel.scanOrientation) else {
                         return self.send(error: .scanningError, for: command.callbackId)
                     }
+
                     self.send(successfulResult: scannedBarcode, for: command.callbackId)
                 } catch OSBARCManagerError.cameraAccessDenied {
                     self.send(error: .cameraAccessDenied, for: command.callbackId)
@@ -36,9 +37,13 @@ class OSBarcode: CDVPlugin {
     }
 
     // TODO: add things here
+
     @objc(testMethod:)
     func testMethod(command: CDVInvokedUrlCommand) {
         print("#################### testMethod was called ####################")
+
+        let argumentsDictionary = command.argument(at: 0) as? [String: Any]
+        print("================> ", argumentsDictionary)
 
         guard let argumentsDictionary = command.argument(at: 0) as? [String: Any],
               let argumentsData = try? JSONSerialization.data(withJSONObject: argumentsDictionary),
@@ -63,6 +68,11 @@ private extension OSBarcode {
     }
 
     func send(error: OSBarcodeError, for callbackId: String) {
+        let pluginResult = CDVPluginResult(status: .error, messageAs: error.errorDictionary)
+        commandDelegate.send(pluginResult, callbackId: callbackId)
+    }
+
+    func sendTest(error: OSBarcodeTestError, for callbackId: String) {
         let pluginResult = CDVPluginResult(status: .error, messageAs: error.errorDictionary)
         commandDelegate.send(pluginResult, callbackId: callbackId)
     }
