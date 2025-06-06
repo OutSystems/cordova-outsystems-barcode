@@ -43,6 +43,8 @@
     <source-file src="src/ios/OSBarcode.swift" />
     <source-file src="src/ios/OSBarcodeError.swift" />
     <source-file src="src/ios/OSBarcodeScanArgumentsModel.swift" />
+    <source-file src="src/ios/OSBarcodeTestArgumentsModel.swift" />
+    <source-file src="src/ios/OSBarcodeTestError.swift" />
 
     <source-file src="src/ios/OSBARCArgumentMappable.swift" target-dir="extensions" />
 
