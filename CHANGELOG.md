@@ -6,6 +6,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 The changes documented here do not include those from the original repository.
 
+## [1.2.1]
+
+### 20-08-2025
+- Chore: Android - Update barcode library to fix MLKit memory consumption bug
+
 ## [1.2.0]
 
 ### 03-12-2024
