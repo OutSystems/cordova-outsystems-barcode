@@ -26,7 +26,9 @@ repositories{
 dependencies {
     implementation("com.github.outsystems:oscore-android:1.2.0@aar")
     implementation("com.github.outsystems:oscordova-android:2.0.1@aar")
-    implementation("com.github.outsystems:osbarcode-android:1.2.1@aar")
+    // TODO replace with new version once lib is published to maven central
+    //implementation("com.github.outsystems:osbarcode-android:1.2.1@aar")
+    implementation(files("libs/OSBarcodeLib-debug.aar"))
 
     implementation 'androidx.appcompat:appcompat:1.7.0'
     implementation "androidx.activity:activity-ktx:1.9.3"

@@ -26,6 +26,8 @@
     <config-file parent="/*" target="AndroidManifest.xml"/>
     <source-file src="src/android/com/outsystems/plugins/barcode/OSBarcode.kt" target-dir="app/src/main/kotlin/com/outsystems/plugins/barcode"/>
     <framework src="src/android/com/outsystems/plugins/barcode/build.gradle" custom="true" type="gradleReference" />
+    <!-- TODO remove once lib is published to maven central -->
+    <lib-file src="src/android/OSBarcodeLib-debug.aar" />
   </platform>
   <platform name="ios">
     <config-file parent="/*" target="config.xml">
