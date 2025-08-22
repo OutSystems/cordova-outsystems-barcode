@@ -48,13 +48,15 @@
 
     <source-file src="src/ios/OSBARCArgumentMappable.swift" target-dir="extensions" />
 
-    <podspec>
+    <!-- TODO remove once lib is published to cocoapods -->
+    <!--<podspec>
       <config>
         <source url="https://cdn.cocoapods.org/"/>
       </config>
       <pods use-frameworks="true">
         <pod name="OSBarcodeLib" spec="1.1.3" />
       </pods>
-    </podspec>
+    </podspec>-->
+    <framework src="src/ios/frameworks/OSBarcodeLib.xcframework" embed="true" custom="true" />
   </platform>
 </plugin>
