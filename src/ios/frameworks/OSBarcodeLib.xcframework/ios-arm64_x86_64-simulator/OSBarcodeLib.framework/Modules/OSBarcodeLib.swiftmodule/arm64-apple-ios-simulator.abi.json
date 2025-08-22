@@ -1580,7 +1580,7 @@
           {
             "kind": "Function",
             "name": "scanBarcode",
-            "printedName": "scanBarcode(with:_:_:and:andHint:)",
+            "printedName": "scanBarcode(with:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -1590,54 +1590,14 @@
               },
               {
                 "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.String?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "usr": "s:Sq"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "OSBARCCameraModel",
-                "printedName": "OSBarcodeLib.OSBARCCameraModel",
-                "usr": "s:12OSBarcodeLib17OSBARCCameraModelO"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "OSBARCOrientationModel",
-                "printedName": "OSBarcodeLib.OSBARCOrientationModel",
-                "usr": "s:12OSBarcodeLib22OSBARCOrientationModelO"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "OSBarcodeLib.OSBARCScannerHint?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "OSBARCScannerHint",
-                    "printedName": "OSBarcodeLib.OSBARCScannerHint",
-                    "usr": "s:12OSBarcodeLib17OSBARCScannerHintO"
-                  }
-                ],
-                "usr": "s:Sq"
+                "name": "OSBARCScanParameters",
+                "printedName": "OSBarcodeLib.OSBARCScanParameters",
+                "usr": "s:12OSBarcodeLib20OSBARCScanParametersV"
               }
             ],
             "declKind": "Func",
-            "usr": "s:12OSBarcodeLib21OSBARCManagerProtocolP11scanBarcode4with__3and0H4HintS2S_SSSgAA17OSBARCCameraModelOAA017OSBARCOrientationK0OAA013OSBARCScannerI0OSgtYaKF",
-            "mangledName": "$s12OSBarcodeLib21OSBARCManagerProtocolP11scanBarcode4with__3and0H4HintS2S_SSSgAA17OSBARCCameraModelOAA017OSBARCOrientationK0OAA013OSBARCScannerI0OSgtYaKF",
+            "usr": "s:12OSBarcodeLib21OSBARCManagerProtocolP11scanBarcode4withSSAA20OSBARCScanParametersV_tYaKF",
+            "mangledName": "$s12OSBarcodeLib21OSBARCManagerProtocolP11scanBarcode4withSSAA20OSBARCScanParametersV_tYaKF",
             "moduleName": "OSBarcodeLib",
             "genericSig": "<τ_0_0 where τ_0_0 : OSBarcodeLib.OSBARCManagerProtocol>",
             "sugared_genericSig": "<Self where Self : OSBarcodeLib.OSBARCManagerProtocol>",
@@ -1721,6 +1681,374 @@
         "kind": "Import",
         "name": "SwiftUI",
         "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "OSBarcodeLib"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "OSBARCScanParameters",
+        "printedName": "OSBARCScanParameters",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "scanInstructions",
+            "printedName": "scanInstructions",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12OSBarcodeLib20OSBARCScanParametersV16scanInstructionsSSvp",
+            "mangledName": "$s12OSBarcodeLib20OSBARCScanParametersV16scanInstructionsSSvp",
+            "moduleName": "OSBarcodeLib",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12OSBarcodeLib20OSBARCScanParametersV16scanInstructionsSSvg",
+                "mangledName": "$s12OSBarcodeLib20OSBARCScanParametersV16scanInstructionsSSvg",
+                "moduleName": "OSBarcodeLib",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "scanButtonText",
+            "printedName": "scanButtonText",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12OSBarcodeLib20OSBARCScanParametersV14scanButtonTextSSSgvp",
+            "mangledName": "$s12OSBarcodeLib20OSBARCScanParametersV14scanButtonTextSSSgvp",
+            "moduleName": "OSBarcodeLib",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12OSBarcodeLib20OSBARCScanParametersV14scanButtonTextSSSgvg",
+                "mangledName": "$s12OSBarcodeLib20OSBARCScanParametersV14scanButtonTextSSSgvg",
+                "moduleName": "OSBarcodeLib",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "cameraDirection",
+            "printedName": "cameraDirection",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "OSBARCCameraModel",
+                "printedName": "OSBarcodeLib.OSBARCCameraModel",
+                "usr": "s:12OSBarcodeLib17OSBARCCameraModelO"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12OSBarcodeLib20OSBARCScanParametersV15cameraDirectionAA17OSBARCCameraModelOvp",
+            "mangledName": "$s12OSBarcodeLib20OSBARCScanParametersV15cameraDirectionAA17OSBARCCameraModelOvp",
+            "moduleName": "OSBarcodeLib",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "OSBARCCameraModel",
+                    "printedName": "OSBarcodeLib.OSBARCCameraModel",
+                    "usr": "s:12OSBarcodeLib17OSBARCCameraModelO"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12OSBarcodeLib20OSBARCScanParametersV15cameraDirectionAA17OSBARCCameraModelOvg",
+                "mangledName": "$s12OSBarcodeLib20OSBARCScanParametersV15cameraDirectionAA17OSBARCCameraModelOvg",
+                "moduleName": "OSBarcodeLib",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "scanOrientation",
+            "printedName": "scanOrientation",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "OSBARCOrientationModel",
+                "printedName": "OSBarcodeLib.OSBARCOrientationModel",
+                "usr": "s:12OSBarcodeLib22OSBARCOrientationModelO"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12OSBarcodeLib20OSBARCScanParametersV15scanOrientationAA22OSBARCOrientationModelOvp",
+            "mangledName": "$s12OSBarcodeLib20OSBARCScanParametersV15scanOrientationAA22OSBARCOrientationModelOvp",
+            "moduleName": "OSBarcodeLib",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "OSBARCOrientationModel",
+                    "printedName": "OSBarcodeLib.OSBARCOrientationModel",
+                    "usr": "s:12OSBarcodeLib22OSBARCOrientationModelO"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12OSBarcodeLib20OSBARCScanParametersV15scanOrientationAA22OSBARCOrientationModelOvg",
+                "mangledName": "$s12OSBarcodeLib20OSBARCScanParametersV15scanOrientationAA22OSBARCOrientationModelOvg",
+                "moduleName": "OSBarcodeLib",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "hint",
+            "printedName": "hint",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "OSBarcodeLib.OSBARCScannerHint?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "OSBARCScannerHint",
+                    "printedName": "OSBarcodeLib.OSBARCScannerHint",
+                    "usr": "s:12OSBarcodeLib17OSBARCScannerHintO"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12OSBarcodeLib20OSBARCScanParametersV4hintAA17OSBARCScannerHintOSgvp",
+            "mangledName": "$s12OSBarcodeLib20OSBARCScanParametersV4hintAA17OSBARCScannerHintOSgvp",
+            "moduleName": "OSBarcodeLib",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "OSBarcodeLib.OSBARCScannerHint?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "OSBARCScannerHint",
+                        "printedName": "OSBarcodeLib.OSBARCScannerHint",
+                        "usr": "s:12OSBarcodeLib17OSBARCScannerHintO"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12OSBarcodeLib20OSBARCScanParametersV4hintAA17OSBARCScannerHintOSgvg",
+                "mangledName": "$s12OSBarcodeLib20OSBARCScanParametersV4hintAA17OSBARCScannerHintOSgvg",
+                "moduleName": "OSBarcodeLib",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(scanInstructions:scanButtonText:cameraDirection:scanOrientation:hint:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "OSBARCScanParameters",
+                "printedName": "OSBarcodeLib.OSBARCScanParameters",
+                "usr": "s:12OSBarcodeLib20OSBARCScanParametersV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "OSBARCCameraModel",
+                "printedName": "OSBarcodeLib.OSBARCCameraModel",
+                "usr": "s:12OSBarcodeLib17OSBARCCameraModelO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "OSBARCOrientationModel",
+                "printedName": "OSBarcodeLib.OSBARCOrientationModel",
+                "usr": "s:12OSBarcodeLib22OSBARCOrientationModelO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "OSBarcodeLib.OSBARCScannerHint?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "OSBARCScannerHint",
+                    "printedName": "OSBarcodeLib.OSBARCScannerHint",
+                    "usr": "s:12OSBarcodeLib17OSBARCScannerHintO"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:12OSBarcodeLib20OSBARCScanParametersV16scanInstructions0E10ButtonText15cameraDirection0E11Orientation4hintACSS_SSSgAA17OSBARCCameraModelOAA017OSBARCOrientationN0OAA17OSBARCScannerHintOSgtcfc",
+            "mangledName": "$s12OSBarcodeLib20OSBARCScanParametersV16scanInstructions0E10ButtonText15cameraDirection0E11Orientation4hintACSS_SSSgAA17OSBARCCameraModelOAA017OSBARCOrientationN0OAA17OSBARCScannerHintOSgtcfc",
+            "moduleName": "OSBarcodeLib",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:12OSBarcodeLib20OSBARCScanParametersV",
+        "mangledName": "$s12OSBarcodeLib20OSBARCScanParametersV",
+        "moduleName": "OSBarcodeLib",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "OSBarcodeLib"
+      },
+      {
+        "kind": "Import",
+        "name": "Vision",
+        "printedName": "Vision",
         "declKind": "Import",
         "moduleName": "OSBarcodeLib"
       },

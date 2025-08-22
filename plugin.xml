@@ -46,7 +46,7 @@
     <source-file src="src/ios/OSBarcodeError.swift" />
     <source-file src="src/ios/OSBarcodeScanArgumentsModel.swift" />
 
-    <source-file src="src/ios/OSBARCArgumentMappable.swift" target-dir="extensions" />
+    <source-file src="src/ios/OSBARCScanParameters+Decodable.swift" target-dir="extensions" />
 
     <!-- TODO remove once lib is published to cocoapods -->
     <!--<podspec>

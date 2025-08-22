@@ -61,7 +61,15 @@ public enum OSBARCCameraModel {
   }
 }
 public protocol OSBARCManagerProtocol {
-  func scanBarcode(with instructionsText: Swift.String, _ buttonText: Swift.String?, _ cameraModel: OSBarcodeLib.OSBARCCameraModel, and orientationModel: OSBarcodeLib.OSBARCOrientationModel, andHint hint: OSBarcodeLib.OSBARCScannerHint?) async throws -> Swift.String
+  func scanBarcode(with parameters: OSBarcodeLib.OSBARCScanParameters) async throws -> Swift.String
+}
+public struct OSBARCScanParameters {
+  public let scanInstructions: Swift.String
+  public let scanButtonText: Swift.String?
+  public let cameraDirection: OSBarcodeLib.OSBARCCameraModel
+  public let scanOrientation: OSBarcodeLib.OSBARCOrientationModel
+  public let hint: OSBarcodeLib.OSBARCScannerHint?
+  public init(scanInstructions: Swift.String, scanButtonText: Swift.String?, cameraDirection: OSBarcodeLib.OSBARCCameraModel, scanOrientation: OSBarcodeLib.OSBARCOrientationModel, hint: OSBarcodeLib.OSBARCScannerHint?)
 }
 public enum OSBARCOrientationModel {
   case adaptive

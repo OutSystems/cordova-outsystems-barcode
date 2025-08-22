@@ -17,12 +17,12 @@ class OSBarcode: CDVPlugin {
             
             guard let argumentsDictionary = command.argument(at: 0) as? [String: Any],
                   let argumentsData = try? JSONSerialization.data(withJSONObject: argumentsDictionary),
-                  let argumentsModel = try? JSONDecoder().decode(OSBarcodeScanArgumentsModel.self, from: argumentsData)
+                  let parameters = try? JSONDecoder().decode(OSBARCScanParameters.self, from: argumentsData)
             else { return self.send(error: .scanInputArgumentsIssue, for: command.callbackId) }
             
             Task {
                 do {
-                    guard let scannedBarcode = try await self.plugin?.scanBarcode(with: argumentsModel.scanInstructions, argumentsModel.scanButtonText, argumentsModel.cameraDirection, and: argumentsModel.scanOrientation, andHint: argumentsModel.hint) else {
+                    guard let scannedBarcode = try await self.plugin?.scanBarcode(with: parameters) else {
                         return self.send(error: .scanningError, for: command.callbackId)
                     }
                     self.send(successfulResult: scannedBarcode, for: command.callbackId)
