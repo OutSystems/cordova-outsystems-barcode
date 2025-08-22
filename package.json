@@ -7,6 +7,14 @@
     "cordova-android",
     "cordova-ios"
   ],
+  "scripts": {
+    "update:tag": "node ./scripts/change-extensibility.js",
+    "update:version": "node ./scripts/tag-applications-o11.js",
+    "deploy": "node ./scripts/deploy.js"
+	},
+  "devDependencies": {
+   
+  },
   "cordova": {
     "id": "com.outsystems.plugins.barcode",
     "platforms": [
