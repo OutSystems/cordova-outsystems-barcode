@@ -22,10 +22,10 @@ class OSBarcode: CDVPlugin {
             
             Task {
                 do {
-                    guard let scannedBarcode = try await self.plugin?.scanBarcode(with: parameters) else {
+                    guard let scanResult = try await self.plugin?.scanBarcode(with: parameters) else {
                         return self.send(error: .scanningError, for: command.callbackId)
                     }
-                    self.send(successfulResult: scannedBarcode, for: command.callbackId)
+                    self.send(successfulResult: scanResult, for: command.callbackId)
                 } catch OSBARCManagerError.cameraAccessDenied {
                     self.send(error: .cameraAccessDenied, for: command.callbackId)
                 } catch OSBARCManagerError.scanningCancelled {
@@ -37,8 +37,9 @@ class OSBarcode: CDVPlugin {
 }
 
 private extension OSBarcode {
-    func send(successfulResult: String, for callbackId: String) {
-        let pluginResult = CDVPluginResult(status: .ok, messageAs: successfulResult)
+    func send(successfulResult: OSBARCScanResult, for callbackId: String) {
+        let resultDict: [String : Any] = ["ScanResult": successfulResult.text, "format": successfulResult.format.rawValue]
+        let pluginResult = CDVPluginResult(status: .ok, messageAs: resultDict)
         self.commandDelegate.send(pluginResult, callbackId: callbackId)
     }
     

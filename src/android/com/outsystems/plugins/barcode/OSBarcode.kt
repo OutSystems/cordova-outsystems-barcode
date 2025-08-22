@@ -9,16 +9,17 @@ import com.google.gson.JsonElement
 import com.outsystems.plugins.barcode.controller.OSBARCController
 import com.outsystems.plugins.barcode.model.OSBARCError
 import com.outsystems.plugins.barcode.model.OSBARCScanParameters
+import com.outsystems.plugins.barcode.model.OSBARCScanResult
 import com.outsystems.plugins.barcode.model.OSBARCScannerHint
 import com.outsystems.plugins.oscordova.CordovaImplementation
 import org.apache.cordova.CallbackContext
 import org.apache.cordova.CordovaInterface
 import org.apache.cordova.CordovaWebView
 import org.json.JSONArray
+import org.json.JSONObject
 import java.lang.reflect.Type
 
 class OSBarcode : CordovaImplementation() {
-
     companion object {
         private const val ERROR_FORMAT_PREFIX = "OS-PLUG-BARC-"
     }
@@ -54,8 +55,12 @@ class OSBarcode : CordovaImplementation() {
     override fun onActivityResult(requestCode: Int, resultCode: Int, intent: Intent?) {
         super.onActivityResult(requestCode, resultCode, intent)
         barcodeController.handleActivityResult(requestCode, resultCode, intent,
-            { result ->
-                sendPluginResult(result, null)
+            { result: OSBARCScanResult ->
+                val jsonObject = JSONObject().apply {
+                    put("ScanResult", result.text)
+                    put("format", result.format.ordinal)
+                }
+                sendPluginResult(jsonObject, null)
             },
             { error ->
                 sendPluginResult(null, Pair(formatErrorCode(error.code), error.description))
