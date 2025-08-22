@@ -996,6 +996,126 @@
         ]
       },
       {
+        "kind": "TypeDecl",
+        "name": "OSBARCScanResult",
+        "printedName": "OSBARCScanResult",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "text",
+            "printedName": "text",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12OSBarcodeLib16OSBARCScanResultV4textSSvp",
+            "mangledName": "$s12OSBarcodeLib16OSBARCScanResultV4textSSvp",
+            "moduleName": "OSBarcodeLib",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12OSBarcodeLib16OSBARCScanResultV4textSSvg",
+                "mangledName": "$s12OSBarcodeLib16OSBARCScanResultV4textSSvg",
+                "moduleName": "OSBarcodeLib",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "format",
+            "printedName": "format",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "OSBARCScannerHint",
+                "printedName": "OSBarcodeLib.OSBARCScannerHint",
+                "usr": "s:12OSBarcodeLib17OSBARCScannerHintO"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12OSBarcodeLib16OSBARCScanResultV6formatAA17OSBARCScannerHintOvp",
+            "mangledName": "$s12OSBarcodeLib16OSBARCScanResultV6formatAA17OSBARCScannerHintOvp",
+            "moduleName": "OSBarcodeLib",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "OSBARCScannerHint",
+                    "printedName": "OSBarcodeLib.OSBARCScannerHint",
+                    "usr": "s:12OSBarcodeLib17OSBARCScannerHintO"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12OSBarcodeLib16OSBARCScanResultV6formatAA17OSBARCScannerHintOvg",
+                "mangledName": "$s12OSBarcodeLib16OSBARCScanResultV6formatAA17OSBARCScannerHintOvg",
+                "moduleName": "OSBarcodeLib",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:12OSBarcodeLib16OSBARCScanResultV",
+        "mangledName": "$s12OSBarcodeLib16OSBARCScanResultV",
+        "moduleName": "OSBarcodeLib",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
         "kind": "Import",
         "name": "SwiftUI",
         "printedName": "SwiftUI",
@@ -1584,9 +1704,9 @@
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
+                "name": "OSBARCScanResult",
+                "printedName": "OSBarcodeLib.OSBARCScanResult",
+                "usr": "s:12OSBarcodeLib16OSBARCScanResultV"
               },
               {
                 "kind": "TypeNominal",
@@ -1596,8 +1716,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:12OSBarcodeLib21OSBARCManagerProtocolP11scanBarcode4withSSAA20OSBARCScanParametersV_tYaKF",
-            "mangledName": "$s12OSBarcodeLib21OSBARCManagerProtocolP11scanBarcode4withSSAA20OSBARCScanParametersV_tYaKF",
+            "usr": "s:12OSBarcodeLib21OSBARCManagerProtocolP11scanBarcode4withAA16OSBARCScanResultVAA0H10ParametersV_tYaKF",
+            "mangledName": "$s12OSBarcodeLib21OSBARCManagerProtocolP11scanBarcode4withAA16OSBARCScanResultVAA0H10ParametersV_tYaKF",
             "moduleName": "OSBarcodeLib",
             "genericSig": "<τ_0_0 where τ_0_0 : OSBarcodeLib.OSBARCManagerProtocol>",
             "sugared_genericSig": "<Self where Self : OSBarcodeLib.OSBARCManagerProtocol>",
@@ -2874,22 +2994,15 @@
     },
     {
       "filePath": "\/Users\/pedrobilro\/Desktop\/client_projects\/outsystems\/source_codes\/cordova_plugins_ios\/OSBarcodeLib-iOS\/OSBarcodeLib\/Scanner\/OSBARCScannerBehaviour.swift",
-      "kind": "StringLiteral",
-      "offset": 308,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/pedrobilro\/Desktop\/client_projects\/outsystems\/source_codes\/cordova_plugins_ios\/OSBarcodeLib-iOS\/OSBarcodeLib\/Scanner\/OSBARCScannerBehaviour.swift",
       "kind": "Array",
-      "offset": 424,
+      "offset": 456,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/pedrobilro\/Desktop\/client_projects\/outsystems\/source_codes\/cordova_plugins_ios\/OSBarcodeLib-iOS\/OSBarcodeLib\/Scanner\/OSBARCScannerView.swift",
       "kind": "BooleanLiteral",
-      "offset": 703,
+      "offset": 713,
       "length": 5,
       "value": "false"
     },
@@ -3036,14 +3149,14 @@
     {
       "filePath": "\/Users\/pedrobilro\/Desktop\/client_projects\/outsystems\/source_codes\/cordova_plugins_ios\/OSBarcodeLib-iOS\/OSBarcodeLib\/Scanner\/CameraManager\/OSBARCCaptureOutputDecoder.swift",
       "kind": "Array",
-      "offset": 844,
+      "offset": 854,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/pedrobilro\/Desktop\/client_projects\/outsystems\/source_codes\/cordova_plugins_ios\/OSBarcodeLib-iOS\/OSBarcodeLib\/Scanner\/CameraManager\/OSBARCCaptureOutputDecoder.swift",
       "kind": "BooleanLiteral",
-      "offset": 1396,
+      "offset": 1416,
       "length": 5,
       "value": "false"
     },

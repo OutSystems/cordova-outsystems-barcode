@@ -42,6 +42,10 @@ public enum OSBARCScannerHint : Swift.Int {
 public struct OSBARCManagerFactory {
   public static func createManager(with rootViewController: UIKit.UIViewController) -> any OSBarcodeLib.OSBARCManagerProtocol
 }
+public struct OSBARCScanResult {
+  public let text: Swift.String
+  public let format: OSBarcodeLib.OSBARCScannerHint
+}
 public enum OSBARCManagerError : Swift.Error {
   case cameraAccessDenied
   case scanningCancelled
@@ -61,7 +65,7 @@ public enum OSBARCCameraModel {
   }
 }
 public protocol OSBARCManagerProtocol {
-  func scanBarcode(with parameters: OSBarcodeLib.OSBARCScanParameters) async throws -> Swift.String
+  func scanBarcode(with parameters: OSBarcodeLib.OSBARCScanParameters) async throws -> OSBarcodeLib.OSBARCScanResult
 }
 public struct OSBARCScanParameters {
   public let scanInstructions: Swift.String
