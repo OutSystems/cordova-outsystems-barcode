@@ -1089,6 +1089,38 @@
                 "accessorKind": "get"
               }
             ]
+          },
+          {
+            "kind": "Function",
+            "name": "==",
+            "printedName": "==(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "OSBARCScanResult",
+                "printedName": "OSBarcodeLib.OSBARCScanResult",
+                "usr": "s:12OSBarcodeLib16OSBARCScanResultV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "OSBARCScanResult",
+                "printedName": "OSBarcodeLib.OSBARCScanResult",
+                "usr": "s:12OSBarcodeLib16OSBARCScanResultV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12OSBarcodeLib16OSBARCScanResultV2eeoiySbAC_ACtFZ",
+            "mangledName": "$s12OSBarcodeLib16OSBARCScanResultV2eeoiySbAC_ACtFZ",
+            "moduleName": "OSBarcodeLib",
+            "static": true,
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
           }
         ],
         "declKind": "Struct",
@@ -1112,6 +1144,13 @@
             "printedName": "Escapable",
             "usr": "s:s9EscapableP",
             "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
           }
         ]
       },

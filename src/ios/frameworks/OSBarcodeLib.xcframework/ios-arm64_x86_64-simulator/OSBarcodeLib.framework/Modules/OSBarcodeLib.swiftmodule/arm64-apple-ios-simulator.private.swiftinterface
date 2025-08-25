@@ -42,9 +42,10 @@ public enum OSBARCScannerHint : Swift.Int {
 public struct OSBARCManagerFactory {
   public static func createManager(with rootViewController: UIKit.UIViewController) -> any OSBarcodeLib.OSBARCManagerProtocol
 }
-public struct OSBARCScanResult {
+public struct OSBARCScanResult : Swift.Equatable {
   public let text: Swift.String
   public let format: OSBarcodeLib.OSBARCScannerHint
+  public static func == (a: OSBarcodeLib.OSBARCScanResult, b: OSBarcodeLib.OSBARCScanResult) -> Swift.Bool
 }
 public enum OSBARCManagerError : Swift.Error {
   case cameraAccessDenied
