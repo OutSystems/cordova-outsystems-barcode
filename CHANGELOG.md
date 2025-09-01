@@ -6,6 +6,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 The changes documented here do not include those from the original repository.
 
+## [2.0.0]
+
+### 01-09-2025
+
+- Feature: Android - provide `hint` and return `format`.
+
+**BREAKING CHANGES**: The `scanBarcode` now returns an object instead of a string.
+
 ## [1.2.1]
 
 ### 20-08-2025
