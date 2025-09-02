@@ -1,6 +1,6 @@
 import OSBarcodeLib
 
-extension OSBARCScanParameters: @retroactive Decodable {
+extension OSBARCScanParameters: Decodable {
     
     enum CodingKeys: CodingKey {
         case scanButton
