@@ -6,6 +6,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 The changes documented here do not include those from the original repository.
 
+## [2.0.1]
+
+### 02-10-2025
+
+- Fix: Android - Crash due to `kotlin.UninitializedPropertyAccessException`.
+
 ## [2.0.0]
 
 ### 01-09-2025
