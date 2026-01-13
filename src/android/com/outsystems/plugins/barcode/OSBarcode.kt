@@ -11,20 +11,21 @@ import com.outsystems.plugins.barcode.model.OSBARCError
 import com.outsystems.plugins.barcode.model.OSBARCScanParameters
 import com.outsystems.plugins.barcode.model.OSBARCScanResult
 import com.outsystems.plugins.barcode.model.OSBARCScannerHint
-import com.outsystems.plugins.oscordova.CordovaImplementation
 import org.apache.cordova.CallbackContext
 import org.apache.cordova.CordovaInterface
+import org.apache.cordova.CordovaPlugin
 import org.apache.cordova.CordovaWebView
+import org.apache.cordova.PluginResult
 import org.json.JSONArray
 import org.json.JSONObject
 import java.lang.reflect.Type
 
-class OSBarcode : CordovaImplementation() {
+class OSBarcode : CordovaPlugin() {
     companion object {
         private const val ERROR_FORMAT_PREFIX = "OS-PLUG-BARC-"
     }
 
-    override var callbackContext: CallbackContext? = null
+    var callbackContext: CallbackContext? = null
     private lateinit var barcodeController: OSBARCController
     val gson: Gson by lazy {
         GsonBuilder()
@@ -75,20 +76,15 @@ class OSBarcode : CordovaImplementation() {
         // do nothing
     }
 
-    override fun areGooglePlayServicesAvailable(): Boolean {
-        // do nothing
-        return true
-    }
-
     override fun onResume(multitasking: Boolean) {
         // Not used in this project.
     }
 
     private fun scan(args: JSONArray) {
-        setAsActivityResultCallback()
+        cordova.setActivityResultCallback(this)
         val parameters = buildScanParameters(args)
         if (parameters != null) {
-            barcodeController.scanCode(getActivity(), parameters)
+            barcodeController.scanCode(cordova.activity, parameters)
         } else {
             sendPluginResult(
                 null,
@@ -103,7 +99,7 @@ class OSBarcode : CordovaImplementation() {
     private fun buildScanParameters(args: JSONArray): OSBARCScanParameters? {
         return try {
             gson.fromJson(args.getString(0), OSBARCScanParameters::class.java)
-        } catch (e: Exception) {
+        } catch (_: Exception) {
             null
         }
     }
@@ -122,6 +118,20 @@ class OSBarcode : CordovaImplementation() {
                 OSBARCScannerHint.entries.getOrNull(it)
             } ?: OSBARCScannerHint.UNKNOWN
         }
+    }
+
+    private fun sendPluginResult(jsonObject: JSONObject?, error: Pair<String, String>?) {
+        var pluginResult: PluginResult?
+        jsonObject?.let {
+            pluginResult = PluginResult(PluginResult.Status.OK, jsonObject.toString())
+            this.callbackContext?.sendPluginResult(pluginResult)
+            return
+        }
+        val jsonResult = JSONObject()
+        jsonResult.put("code", error?.first)
+        jsonResult.put("message", error?.second ?: "No Results")
+        pluginResult = PluginResult(PluginResult.Status.ERROR, jsonResult)
+        this.callbackContext?.sendPluginResult(pluginResult)
     }
 
 }
