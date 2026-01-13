@@ -6,6 +6,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 The changes documented here do not include those from the original repository.
 
+## [2.0.2]
+
+### 13-01-2026
+
+- Chore: Remove unnecessary dependency to `oscore` and `oscordova`.
+
 ## [2.0.1]
 
 ### 02-10-2025
