@@ -3,7 +3,7 @@ const xml2js = require('xml2js');
 
 module.exports = {
   branches: ['main'],
-  tagFormat: '${version}',  // semantic-release uses vX.Y.Z by default, but our cordova plugins expect X.Y.Z
+  tagFormat: '${version}',  // semantic-release uses vX.Y.Z by default; but our cordova plugins expect X.Y.Z
   plugins: [
     [
       "@semantic-release/commit-analyzer",
