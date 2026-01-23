@@ -1,38 +1,3 @@
-## [2.0.8](https://github.com/OS-pedrogustavobilro/cordova-outsystems-barcode/compare/2.0.7...2.0.8) (2026-01-23)
-
-## [2.0.7](https://github.com/OS-pedrogustavobilro/cordova-outsystems-barcode/compare/2.0.6...2.0.7) (2026-01-23)
-
-
-* Merge branch 'main' of https://github.com/OS-pedrogustavobilro/cordova-outsystems-barcode ([](https://github.com/OS-pedrogustavobilro/cordova-outsystems-barcode/commit/00a9d889fcb84fc36837070f2653bbbec0b55b77))
-
-
-### chore
-
-* remove other ([](https://github.com/OS-pedrogustavobilro/cordova-outsystems-barcode/commit/ba0c21ce3d0efacd1d0348261df3e7d240fc89ef))
-
-## [2.0.6](https://github.com/OS-pedrogustavobilro/cordova-outsystems-barcode/compare/2.0.5...2.0.6) (2026-01-23)
-
-
-### chore
-
-* add writer opts to release ([](https://github.com/OS-pedrogustavobilro/cordova-outsystems-barcode/commit/73f2fa4247065e6a9234bda47e5fe8cc8594dbc4))
-
-
-### other
-
-* Merge branch 'main' of https://github.com/OS-pedrogustavobilro/cordova-outsystems-barcode ([](https://github.com/OS-pedrogustavobilro/cordova-outsystems-barcode/commit/b35b22dc53b496748549488114f02f6f890a1263))
-
-## [2.0.5](https://github.com/OS-pedrogustavobilro/cordova-outsystems-barcode/compare/2.0.4...2.0.5) (2026-01-23)
-
-## [2.0.4](https://github.com/OS-pedrogustavobilro/cordova-outsystems-barcode/compare/2.0.3...2.0.4) (2026-01-23)
-
-## [2.0.3](https://github.com/OS-pedrogustavobilro/cordova-outsystems-barcode/compare/2.0.2...2.0.3) (2026-01-23)
-
-
-### Reverts
-
-* Revert chore(release): 2.0.2 [skip ci] ([8c9c4f4](https://github.com/OS-pedrogustavobilro/cordova-outsystems-barcode/commit/8c9c4f4e4d74a2abd0ce1f55d01eee33942e94de))
-
 ## [2.0.2]
 
 ### 13-01-2026
