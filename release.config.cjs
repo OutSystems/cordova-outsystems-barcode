@@ -33,7 +33,7 @@ module.exports = {
         writerOpts: {
           transform: (commit) => ({
             ...commit,
-            type: commit.type || 'other',
+            type: commit.type,
           }),
         },
       }
