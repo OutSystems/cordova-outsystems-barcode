@@ -1,3 +1,5 @@
+## [2.0.4](https://github.com/OS-pedrogustavobilro/cordova-outsystems-barcode/compare/2.0.3...2.0.4) (2026-01-23)
+
 ## [2.0.3](https://github.com/OS-pedrogustavobilro/cordova-outsystems-barcode/compare/2.0.2...2.0.3) (2026-01-23)
 
 
