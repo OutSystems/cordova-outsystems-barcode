@@ -1,3 +1,13 @@
+## [2.0.7](https://github.com/OS-pedrogustavobilro/cordova-outsystems-barcode/compare/2.0.6...2.0.7) (2026-01-23)
+
+
+* Merge branch 'main' of https://github.com/OS-pedrogustavobilro/cordova-outsystems-barcode ([](https://github.com/OS-pedrogustavobilro/cordova-outsystems-barcode/commit/00a9d889fcb84fc36837070f2653bbbec0b55b77))
+
+
+### chore
+
+* remove other ([](https://github.com/OS-pedrogustavobilro/cordova-outsystems-barcode/commit/ba0c21ce3d0efacd1d0348261df3e7d240fc89ef))
+
 ## [2.0.6](https://github.com/OS-pedrogustavobilro/cordova-outsystems-barcode/compare/2.0.5...2.0.6) (2026-01-23)
 
 
