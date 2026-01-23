@@ -15,29 +15,7 @@ module.exports = {
         ]
       }
     ],
-    [
-      '@semantic-release/release-notes-generator',
-      {
-        preset: 'angular',
-        presetConfig: {
-          types: [
-            { type: 'feat', section: 'Features' },
-            { type: 'fix', section: 'Bug Fixes' },
-            { type: 'perf', section: 'Performance Improvements' },
-            { type: 'revert', section: 'Reverts' },
-            { type: 'docs', section: 'Documentation' },
-            { type: 'refactor', section: 'Refactoring' },
-            { type: 'chore', section: 'Chores' }
-          ]
-        },
-        writerOpts: {
-          transform: (commit) => ({
-            ...commit,
-            type: commit.type,
-          }),
-        },
-      }
-    ],
+    '@semantic-release/release-notes-generator',
     [
       '@semantic-release/changelog',
       {
