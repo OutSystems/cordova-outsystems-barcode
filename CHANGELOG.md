@@ -1,3 +1,10 @@
+## [2.0.3](https://github.com/OS-pedrogustavobilro/cordova-outsystems-barcode/compare/2.0.2...2.0.3) (2026-01-23)
+
+
+### Reverts
+
+* Revert chore(release): 2.0.2 [skip ci] ([8c9c4f4](https://github.com/OS-pedrogustavobilro/cordova-outsystems-barcode/commit/8c9c4f4e4d74a2abd0ce1f55d01eee33942e94de))
+
 ## [2.0.2]
 
 ### 13-01-2026
