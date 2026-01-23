@@ -26,12 +26,16 @@ module.exports = {
             { type: 'perf', section: 'Performance Improvements' },
             { type: 'revert', section: 'Reverts' },
             { type: 'docs', section: 'Documentation' },
-
-            // 👇 your missing ones
             { type: 'refactor', section: 'Refactoring' },
             { type: 'chore', section: 'Chores' }
           ]
-        }
+        },
+        writerOpts: {
+          transform: (commit) => ({
+            ...commit,
+            type: commit.type || 'other',
+          }),
+        },
       }
     ],
     [
