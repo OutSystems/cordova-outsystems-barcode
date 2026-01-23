@@ -1,3 +1,9 @@
+## [2.0.2]
+
+### 13-01-2026
+
+- Chore: Remove unnecessary dependency to `oscore` and `oscordova`.
+
 ## [2.0.1]
 
 ### 02-10-2025
