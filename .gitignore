@@ -1,0 +1,13 @@
+**/build
+**/.gradle
+**/.idea
+.DS_Store
+
+*.pbxuser
+xcuserdata
+!xcshareddata
+!xcschemes
+
+**/node_modules
+*.jar
+gradle/wrapper/gradle-wrapper.properties

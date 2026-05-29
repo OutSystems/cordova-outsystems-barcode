@@ -6,53 +6,45 @@
   <js-module name="OSBarcode" src="www/OSBarcode.js">
     <clobbers target="cordova.plugins.OSBarcode"/>
   </js-module>
-
   <js-module name="OSBarcodeScanner" src="www/OSBarcodeScanner.js">
     <clobbers target="cordova.plugins.OSBarcodeScanner"/>
   </js-module>
-
   <js-module name="OSBarcodeConstants" src="www/OSBarcodeConstants.js">
     <clobbers target="OSBarcodeConstants"/>
   </js-module>
-
   <platform name="android">
     <config-file parent="/*" target="res/xml/config.xml">
       <feature name="OSBarcode">
         <param name="android-package" value="com.outsystems.plugins.barcode.OSBarcode"/>
       </feature>
-      <preference name="GradlePluginKotlinEnabled" value="true" />
-      <preference name="GradlePluginKotlinCodeStyle" value="official" />
+      <preference name="GradlePluginKotlinEnabled" value="true"/>
+      <preference name="GradlePluginKotlinCodeStyle" value="official"/>
     </config-file>
     <config-file parent="/*" target="AndroidManifest.xml"/>
     <source-file src="src/android/com/outsystems/plugins/barcode/OSBarcode.kt" target-dir="app/src/main/kotlin/com/outsystems/plugins/barcode"/>
-    <framework src="src/android/com/outsystems/plugins/barcode/build.gradle" custom="true" type="gradleReference" />
-
+    <framework src="src/android/com/outsystems/plugins/barcode/build.gradle" custom="true" type="gradleReference"/>
   </platform>
   <platform name="ios">
     <config-file parent="/*" target="config.xml">
       <feature name="OSBarcode">
         <param name="ios-package" value="OSBarcode"/>
       </feature>
-      <preference name="SwiftVersion" value="5" />
+      <preference name="SwiftVersion" value="5"/>
     </config-file>
-
-    <preference name="CAMERA_USAGE_DESCRIPTION" default=" " />
     <config-file target="*-Info.plist" parent="NSCameraUsageDescription">
       <string>$CAMERA_USAGE_DESCRIPTION</string>
     </config-file>
-
-    <source-file src="src/ios/OSBarcode.swift" />
-    <source-file src="src/ios/OSBarcodeError.swift" />
-    
-    <source-file src="src/ios/OSBARCArgumentMappable.swift" target-dir="extensions" />
-    <source-file src="src/ios/OSBARCScanParameters+Decodable.swift" target-dir="extensions" />
-
+    <preference name="CAMERA_USAGE_DESCRIPTION" default=" "/>
+    <source-file src="src/ios/OSBarcode.swift"/>
+    <source-file src="src/ios/OSBarcodeError.swift"/>
+    <source-file src="src/ios/OSBARCArgumentMappable.swift" target-dir="extensions"/>
+    <source-file src="src/ios/OSBARCScanParameters+Decodable.swift" target-dir="extensions"/>
     <podspec>
       <config>
         <source url="https://cdn.cocoapods.org/"/>
       </config>
       <pods use-frameworks="true">
-        <pod name="OSBarcodeLib" spec="2.0.1" />
+        <pod name="OSBarcodeLib" spec="2.0.1"/>
       </pods>
     </podspec>
   </platform>
