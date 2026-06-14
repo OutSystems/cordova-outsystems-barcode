@@ -12,7 +12,10 @@ exports.scan = function (options, successCallback, errorCallback) {
         scanButton: options.scan_button,
         scanText: options.scan_button_text,
         hint: BarcodeConstants.Hint.ALL,
-        androidScanningLibrary: null
+        androidScanningLibrary: null,
+        cancelButtonAccessibilityLabel: options.cancel_button_accessibility_label,
+        torchButtonOnAccessibilityLabel: options.torch_button_on_accessibility_label,
+        torchButtonOffAccessibilityLabel: options.torch_button_off_accessibility_label
     };
 
     Barcode.scanBarcode(args, successCallback, errorCallback);
