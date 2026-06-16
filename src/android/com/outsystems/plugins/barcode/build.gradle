@@ -24,10 +24,11 @@ repositories{
 }
 
 dependencies {
-    // LOCAL TESTING ONLY: the OSBarcodeLib library is bundled as a local AAR via plugin.xml
-    // (<framework src="src/android/libs/OSBarcodeLib-release.aar" custom="true" type="aar"/>),
-    // which Cordova wires into the app build automatically. Restore the published dependency
-    // before publishing: implementation("io.ionic.libs:ionbarcode-android:2.0.1@aar")
+    // LOCAL TESTING ONLY: resolve the bundled OSBarcodeLib AAR from the flatDir repo above. The
+    // .aar is copied into app/src/main/libs by plugin.xml (<source-file ... target-dir=...>).
+    // Restore the published dependency before publishing:
+    // implementation("io.ionic.libs:ionbarcode-android:2.0.1@aar")
+    implementation(name: 'OSBarcodeLib-release', ext: 'aar')
 
     implementation 'androidx.appcompat:appcompat:1.7.0'
     implementation "androidx.activity:activity-ktx:1.9.3"

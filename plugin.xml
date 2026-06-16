@@ -23,9 +23,11 @@
     <config-file parent="/*" target="AndroidManifest.xml"/>
     <source-file src="src/android/com/outsystems/plugins/barcode/OSBarcode.kt" target-dir="app/src/main/kotlin/com/outsystems/plugins/barcode"/>
     <framework src="src/android/com/outsystems/plugins/barcode/build.gradle" custom="true" type="gradleReference"/>
-    <!-- LOCAL TESTING ONLY: bundle the locally-built OSBarcodeLib AAR (feat/RMET-5194/alternate-text branch).
-         Remove this and restore the published Maven dependency in build.gradle before publishing. -->
-    <framework src="src/android/libs/OSBarcodeLib-release.aar" custom="true" type="aar"/>
+    <!-- LOCAL TESTING ONLY: copy the locally-built OSBarcodeLib AAR into the app module's
+         src/main/libs so the flatDir repository declared in build.gradle can resolve it
+         (cordova-android has no AAR framework type; a custom framework would be treated as a
+         gradle subproject). Remove this and restore the published Maven dependency before publishing. -->
+    <source-file src="src/android/libs/OSBarcodeLib-release.aar" target-dir="app/src/main/libs"/>
   </platform>
   <platform name="ios">
     <config-file parent="/*" target="config.xml">
