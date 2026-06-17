@@ -23,11 +23,6 @@
     <config-file parent="/*" target="AndroidManifest.xml"/>
     <source-file src="src/android/com/outsystems/plugins/barcode/OSBarcode.kt" target-dir="app/src/main/kotlin/com/outsystems/plugins/barcode"/>
     <framework src="src/android/com/outsystems/plugins/barcode/build.gradle" custom="true" type="gradleReference"/>
-    <!-- LOCAL TESTING ONLY: copy the locally-built OSBarcodeLib AAR into the app module's
-         src/main/libs so the flatDir repository declared in build.gradle can resolve it
-         (cordova-android has no AAR framework type; a custom framework would be treated as a
-         gradle subproject). Remove this and restore the published Maven dependency before publishing. -->
-    <source-file src="src/android/libs/OSBarcodeLib-release.aar" target-dir="app/src/main/libs"/>
   </platform>
   <platform name="ios">
     <config-file parent="/*" target="config.xml">
@@ -44,19 +39,13 @@
     <source-file src="src/ios/OSBarcodeError.swift"/>
     <source-file src="src/ios/OSBARCArgumentMappable.swift" target-dir="extensions"/>
     <source-file src="src/ios/OSBARCScanParameters+Decodable.swift" target-dir="extensions"/>
-    <!-- LOCAL TESTING ONLY: bundle the locally-built OSBarcodeLib xcframework (feat/RMET-5194/alternate-text
-         branch) instead of the published CocoaPods pod. It's a dynamic framework, so embed="true".
-         Restore the <podspec> block below before publishing. -->
-    <framework src="src/ios/OSBarcodeLib.xcframework" custom="true" embed="true"/>
-    <!--
     <podspec>
       <config>
         <source url="https://cdn.cocoapods.org/"/>
       </config>
       <pods use-frameworks="true">
-        <pod name="OSBarcodeLib" spec="2.0.1"/>
+        <pod name="OSBarcodeLib" spec="2.2.0"/>
       </pods>
     </podspec>
-    -->
   </platform>
 </plugin>
