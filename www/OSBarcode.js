@@ -10,8 +10,11 @@ exports.scanBarcode = function (options, successCallback, errorCallback) {
     let scanText = options.scanText;
     let hint = options.hint;
     let androidScanningLibrary = options.androidScanningLibrary;
+    let cancelButtonAccessibilityLabel = options.cancelButtonAccessibilityLabel;
+    let torchButtonOnAccessibilityLabel = options.torchButtonOnAccessibilityLabel;
+    let torchButtonOffAccessibilityLabel = options.torchButtonOffAccessibilityLabel;
 
-    let args = [{scanInstructions, cameraDirection, scanOrientation, scanButton, scanText, hint, androidScanningLibrary}];
+    let args = [{scanInstructions, cameraDirection, scanOrientation, scanButton, scanText, hint, androidScanningLibrary, cancelButtonAccessibilityLabel, torchButtonOnAccessibilityLabel, torchButtonOffAccessibilityLabel}];
 
     exec(successCallback, errorCallback, 'OSBarcode', 'scanBarcode', args);
 }
