@@ -15,7 +15,7 @@ exports.scan = function (options, successCallback, errorCallback) {
         androidScanningLibrary: null,
         cancelButtonAccessibilityLabel: options.cancel_button_accessibility_label,
         torchButtonOnAccessibilityLabel: options.torch_button_on_accessibility_label,
-        torchButtonOffAccessibilityLabel: options.torch_button_off_accessibility_label
+        androidScanningLibrary: null
     };
 
     Barcode.scanBarcode(args, successCallback, errorCallback);
