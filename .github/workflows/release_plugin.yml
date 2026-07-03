@@ -1,6 +1,8 @@
 name: Release Cordova Plugin (GitHub)
 
 on:
+  push:
+    branches: [main]
   workflow_dispatch:
 
 permissions:

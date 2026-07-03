@@ -1,3 +1,10 @@
+## [2.0.3](https://github.com/OutSystems/cordova-outsystems-barcode/compare/2.0.2...2.0.3) (2026-06-26)
+
+
+### Bug Fixes
+
+* **android:** prevent Expanded Dark Theme color inversion on scanner ([#51](https://github.com/OutSystems/cordova-outsystems-barcode/issues/51)) ([e9b0b4c](https://github.com/OutSystems/cordova-outsystems-barcode/commit/e9b0b4cda64e61825be59510b91888c982f5dc72))
+
 ## [2.0.2]
 
 ### 13-01-2026
