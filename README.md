@@ -78,6 +78,9 @@ The action is composed of the following parameters:
 	- **scanButton**: A boolean that will display a scan button on the barcode reader. With the button, scanning will only be triggered when pressing the button instead of automatically when framing the barcode. A second click on the button disables scannning.
 	- **scanText**: A text to be displayed on the scan button. It will only be shown if **scanButton** is set to true.
 	- **androidScanningLibrary**: A text equivalent to the **OSBarcodeConstants.AndroidScanningLibrary** structure. It indicates which library will be used to perform the scan: MLKit or ZXing. As the name indicates, it's only applicable to "Android".
+	- **cancelButtonAccessibilityLabel**: A text used as the accessibility label (alternative text) read by screen readers for the cancel button. When omitted or empty, no accessibility label is set.
+	- **torchButtonOnAccessibilityLabel**: A text used as the accessibility label read by screen readers for the torch button when the torch is on. When omitted or empty, no accessibility label is set.
+	- **torchButtonOffAccessibilityLabel**: A text used as the accessibility label read by screen readers for the torch button when the torch is off. When omitted or empty, no accessibility label is set.
 - **successCallback**: A structure indicating that the action was successful. It returns a **ScanResult**: a text containing the value associated with the scanned barcode.
 - **errorCallback**: A structure indicating that the action was not successful. It returns an "error" structure, composed of:
 	- **code**: A text containing the error code.
