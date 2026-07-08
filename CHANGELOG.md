@@ -1,3 +1,10 @@
+# [2.1.0](https://github.com/OutSystems/cordova-outsystems-barcode/compare/2.0.3...2.1.0) (2026-07-08)
+
+
+### Features
+
+* add optional accessibility label scan parameters ([#49](https://github.com/OutSystems/cordova-outsystems-barcode/issues/49)) ([d947ad6](https://github.com/OutSystems/cordova-outsystems-barcode/commit/d947ad6edd2cfa5e441c5fe33823e3497178faee))
+
 ## [2.0.3](https://github.com/OutSystems/cordova-outsystems-barcode/compare/2.0.2...2.0.3) (2026-06-26)
 
 
