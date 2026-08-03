@@ -21,7 +21,9 @@ repositories{
 }
 
 dependencies {
-    implementation("io.ionic.libs:ionbarcode-android:2.1.0@aar")
+    // TODO replace aar with the new version of the library when it is available in the public repository
+    //implementation("io.ionic.libs:ionbarcode-android:2.1.0@aar")
+    implementation(files("libs/OSBarcodeLib-debug.aar"))
 
     implementation 'androidx.appcompat:appcompat:1.7.0'
     implementation "androidx.activity:activity-ktx:1.9.3"
