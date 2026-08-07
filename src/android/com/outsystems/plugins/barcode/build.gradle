@@ -12,9 +12,6 @@ buildscript {
 repositories {
     google()
     mavenCentral()
-    repositories {
-        maven { url 'https://pkgs.dev.azure.com/OutSystemsRD/9e79bc5b-69b2-4476-9ca5-d67594972a52/_packaging/PublicArtifactRepository/maven/v1' }
-    }
 }
 
 repositories{
@@ -24,7 +21,7 @@ repositories{
 }
 
 dependencies {
-    implementation("io.ionic.libs:ionbarcode-android:2.1.0@aar")
+    implementation("io.ionic.libs:ionbarcode-android:2.1.1@aar")
 
     implementation 'androidx.appcompat:appcompat:1.7.0'
     implementation "androidx.activity:activity-ktx:1.9.3"
