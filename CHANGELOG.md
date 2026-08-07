@@ -1,3 +1,10 @@
+## [2.1.1](https://github.com/OutSystems/cordova-outsystems-barcode/compare/2.1.0...2.1.1) (2026-08-07)
+
+
+### Bug Fixes
+
+* **android:** only show camera preview after grating permission ([#52](https://github.com/OutSystems/cordova-outsystems-barcode/issues/52)) ([6b7fe1d](https://github.com/OutSystems/cordova-outsystems-barcode/commit/6b7fe1dc0e772ac38671621a038c57bedc52f40b))
+
 # [2.1.0](https://github.com/OutSystems/cordova-outsystems-barcode/compare/2.0.3...2.1.0) (2026-07-08)
 
 
