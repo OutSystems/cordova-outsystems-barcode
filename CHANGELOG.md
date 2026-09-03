@@ -1,3 +1,10 @@
+## [2.1.2](https://github.com/OutSystems/cordova-outsystems-barcode/compare/2.1.1...2.1.2) (2026-09-03)
+
+
+### Bug Fixes
+
+* prevent SwiftUICore crash on ios 15/16 ([#54](https://github.com/OutSystems/cordova-outsystems-barcode/issues/54)) ([a8a5154](https://github.com/OutSystems/cordova-outsystems-barcode/commit/a8a5154fac3a8150360e6be0376828e1063e59e7))
+
 ## [2.1.1](https://github.com/OutSystems/cordova-outsystems-barcode/compare/2.1.0...2.1.1) (2026-08-07)
 
 
