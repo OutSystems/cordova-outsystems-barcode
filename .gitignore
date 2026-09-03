@@ -11,3 +11,8 @@ xcuserdata
 **/node_modules
 *.jar
 gradle/wrapper/gradle-wrapper.properties
+
+# Swift Package Manager
+.build/
+.swiftpm/
+Package.resolved

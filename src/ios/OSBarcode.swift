@@ -1,3 +1,7 @@
+#if canImport(Cordova)
+import Cordova
+#endif
+
 import OSBarcodeLib
 
 /// The plugin's main class

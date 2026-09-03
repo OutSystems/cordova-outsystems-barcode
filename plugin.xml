@@ -24,7 +24,7 @@
     <source-file src="src/android/com/outsystems/plugins/barcode/OSBarcode.kt" target-dir="app/src/main/kotlin/com/outsystems/plugins/barcode"/>
     <framework src="src/android/com/outsystems/plugins/barcode/build.gradle" custom="true" type="gradleReference"/>
   </platform>
-  <platform name="ios">
+  <platform name="ios" package="swift">
     <config-file parent="/*" target="config.xml">
       <feature name="OSBarcode">
         <param name="ios-package" value="OSBarcode"/>
@@ -44,7 +44,7 @@
         <source url="https://cdn.cocoapods.org/"/>
       </config>
       <pods use-frameworks="true">
-        <pod name="OSBarcodeLib" spec="2.2.1"/>
+        <pod name="OSBarcodeLib" spec="2.2.1" nospm="true"/>
       </pods>
     </podspec>
   </platform>
