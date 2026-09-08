@@ -13,7 +13,7 @@ let package = Package(
         )
     ],
     dependencies: [
-        .package(url: "https://github.com/apache/cordova-ios.git", from: "8.0.0"),
+        .package(url: "https://github.com/apache/cordova-ios.git", branch: "master"),
         .package(url: "https://github.com/OutSystems/OSBarcodeLib-iOS.git", exact: "2.2.1")
     ],
     targets: [
