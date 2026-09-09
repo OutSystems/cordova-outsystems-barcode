@@ -1,3 +1,5 @@
+import Foundation
+
 private struct OSBarcodeErrorLabels {
     static let code = "code"
     static let codeFormat = "OS-PLUG-BARC-"
