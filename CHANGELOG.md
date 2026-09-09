@@ -1,3 +1,10 @@
+# [2.2.0](https://github.com/OutSystems/cordova-outsystems-barcode/compare/2.1.2...2.2.0) (2026-09-09)
+
+
+### Features
+
+* **ios:** add Swift Package Manager support ([#55](https://github.com/OutSystems/cordova-outsystems-barcode/issues/55)) ([f3dd78a](https://github.com/OutSystems/cordova-outsystems-barcode/commit/f3dd78ae37716926812d4849b1b8c0ed1b9120dd))
+
 ## [2.1.2](https://github.com/OutSystems/cordova-outsystems-barcode/compare/2.1.1...2.1.2) (2026-09-03)
 
 
