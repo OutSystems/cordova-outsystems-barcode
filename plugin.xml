@@ -44,7 +44,7 @@
         <source url="https://cdn.cocoapods.org/"/>
       </config>
       <pods use-frameworks="true">
-        <pod name="OSBarcodeLib" spec="2.2.1" nospm="true"/>
+        <pod name="OSBarcodeLib" spec="3.0.0" nospm="true"/>
       </pods>
     </podspec>
   </platform>
