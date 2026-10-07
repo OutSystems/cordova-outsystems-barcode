@@ -1,3 +1,10 @@
+## [2.2.1](https://github.com/OutSystems/cordova-outsystems-barcode/compare/2.2.0...2.2.1) (2026-10-07)
+
+
+### Bug Fixes
+
+* **ios:** update native lib to latest version ([#56](https://github.com/OutSystems/cordova-outsystems-barcode/issues/56)) ([8a00362](https://github.com/OutSystems/cordova-outsystems-barcode/commit/8a003624c24808f90e3563571ca4d1768e4b18cd))
+
 # [2.2.0](https://github.com/OutSystems/cordova-outsystems-barcode/compare/2.1.2...2.2.0) (2026-09-09)
 
 
