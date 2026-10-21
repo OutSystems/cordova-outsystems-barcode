@@ -38,3 +38,10 @@ dependencies {
     implementation 'androidx.compose.material3:material3:1.3.1'
     implementation 'androidx.compose.material3:material3-window-size-class:1.3.1'
 }
+
+// Cordova apps only get this file, so it writes its own R8 rules where clean won't remove them.
+// ML Kit barcode scanning brings firebase-components 16.1.0, which loses these constructors under AGP 9.
+def r8Rules = new File(rootDir, '.gradle/outsystems-barcode-rules.pro')
+r8Rules.parentFile.mkdirs()
+r8Rules.text = '-keep class * implements com.google.firebase.components.ComponentRegistrar { <init>(); }\n'
+android.buildTypes.release.proguardFile(r8Rules)
