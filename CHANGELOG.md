@@ -1,3 +1,10 @@
+## [2.2.2](https://github.com/OutSystems/cordova-outsystems-barcode/compare/2.2.1...2.2.2) (2026-10-23)
+
+
+### Bug Fixes
+
+* **android:** keep Firebase registrars from R8 ([2782b2f](https://github.com/OutSystems/cordova-outsystems-barcode/commit/2782b2fad600aba9246fe99698efeb853461513b))
+
 ## [2.2.1](https://github.com/OutSystems/cordova-outsystems-barcode/compare/2.2.0...2.2.1) (2026-10-07)
 
 
