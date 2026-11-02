@@ -21,7 +21,7 @@ repositories{
 }
 
 dependencies {
-    implementation("io.ionic.libs:ionbarcode-android:2.1.1@aar")
+    implementation("io.ionic.libs:ionbarcode-android:99.0.0-rmet5348@aar")
 
     implementation 'androidx.appcompat:appcompat:1.7.0'
     implementation "androidx.activity:activity-ktx:1.9.3"
@@ -45,3 +45,8 @@ def r8Rules = new File(rootDir, '.gradle/outsystems-barcode-rules.pro')
 r8Rules.parentFile.mkdirs()
 r8Rules.text = '-keep class * implements com.google.firebase.components.ComponentRegistrar { <init>(); }\n'
 android.buildTypes.release.proguardFile(r8Rules)
+
+// RMET-5348 TEST ONLY - do not merge: resolve the locally built native library bundled in this plugin (local-maven-ionbarcode-android)
+repositories {
+    maven { url "${rootDir}/app/src/main/local-maven-ionbarcode-android" }
+}

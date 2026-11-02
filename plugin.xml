@@ -23,6 +23,7 @@
     <config-file parent="/*" target="AndroidManifest.xml"/>
     <source-file src="src/android/com/outsystems/plugins/barcode/OSBarcode.kt" target-dir="app/src/main/kotlin/com/outsystems/plugins/barcode"/>
     <framework src="src/android/com/outsystems/plugins/barcode/build.gradle" custom="true" type="gradleReference"/>
+    <resource-file src="local-maven-ionbarcode-android" target="local-maven-ionbarcode-android"/>
   </platform>
   <platform name="ios" package="swift">
     <config-file parent="/*" target="config.xml">
