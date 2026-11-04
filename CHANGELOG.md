@@ -1,3 +1,10 @@
+## [2.2.3](https://github.com/OutSystems/cordova-outsystems-barcode/compare/2.2.2...2.2.3) (2026-11-04)
+
+
+### Bug Fixes
+
+* **android:** declare Gson dependency used by OSBarcode.kt ([#59](https://github.com/OutSystems/cordova-outsystems-barcode/issues/59)) ([b17a40e](https://github.com/OutSystems/cordova-outsystems-barcode/commit/b17a40e6cc1bf4b9c4d8c4c8da6b1499e0f8543f))
+
 ## [2.2.2](https://github.com/OutSystems/cordova-outsystems-barcode/compare/2.2.1...2.2.2) (2026-10-23)
 
 
