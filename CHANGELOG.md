@@ -1,3 +1,10 @@
+## [2.2.4](https://github.com/OutSystems/cordova-outsystems-barcode/compare/2.2.3...2.2.4) (2026-11-09)
+
+
+### Bug Fixes
+
+* **ios:** rotate the scanner to the forced scanOrientation in UIScene apps ([#58](https://github.com/OutSystems/cordova-outsystems-barcode/issues/58)) ([c5fc46b](https://github.com/OutSystems/cordova-outsystems-barcode/commit/c5fc46b775e0f816a3a0ba1aa5609606779034a5))
+
 ## [2.2.3](https://github.com/OutSystems/cordova-outsystems-barcode/compare/2.2.2...2.2.3) (2026-11-04)
 
 
